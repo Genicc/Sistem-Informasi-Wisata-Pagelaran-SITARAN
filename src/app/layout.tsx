@@ -124,7 +124,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <Navbar />
         {children}
         <AboutSection />
