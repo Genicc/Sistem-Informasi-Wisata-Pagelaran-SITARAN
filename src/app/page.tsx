@@ -1,9 +1,7 @@
 // src/app/page.tsx
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
-
 import { Kaushan_Script } from "next/font/google";
-
 import type { Metadata } from "next";
 
 const kaushan = Kaushan_Script({
@@ -42,62 +40,90 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/70 to-white" />
         </div>
 
-          {/* ILUSTRASI KIRI & KANAN (4 gambar) */}
+        {/* ILUSTRASI KIRI & KANAN (4 gambar) */}
         <div className="pointer-events-none absolute inset-0 flex items-stretch justify-between z-10">
           {/* KOLOM KIRI */}
-          <div className="hidden md:flex flex-col justify-between items-start w-[180px] sm:w-[220px] lg:w-[260px] xl:w-[320px]">
+          <div
+            className="
+              flex flex-col justify-center items-start
+              gap-4
+              w-[130px] sm:w-[160px] md:w-[210px] lg:w-[230px] xl:w-[260px]
+            "
+          >
             {/* Wayang kiri (atas) */}
-            <div className="relative -ml-4 md:-ml-8 mt-32 fade-in-left ">
+            <div className="relative -ml-4 sm:-ml-6 fade-in-left">
               <Image
-                src="/image/wayang.png" // ganti dengan file wayang kirimu
+                src="/image/wayang.png"
                 alt="Ilustrasi Wayang Pagelaran"
                 width={500}
                 height={500}
-                className="w-full h-auto drop-shadow-2xl rotate-[8deg] scale-125"
+                className="
+                  w-full h-auto drop-shadow-2xl
+                  rotate-[4deg]
+                  scale-110 sm:scale-120 md:scale-135
+                "
               />
             </div>
 
             {/* Gerabah kiri (bawah) */}
-            <div className="relative -ml-4 md:-ml-8 mb-[-10px] fade-in-left">
+            <div className="relative -ml-4 sm:-ml-6 fade-in-left mt-100">
               <Image
-                src="/image/kendi.png" // stack gerabah kiri
+                src="/image/kendi.png"
                 alt="Ilustrasi Gerabah Pagelaran"
                 width={500}
                 height={500}
-                className="w-full h-auto drop-shadow-2xl"
+                className="
+                  w-full h-auto drop-shadow-2xl
+                  scale-105 sm:scale-115 md:scale-125
+                "
               />
             </div>
           </div>
 
           {/* KOLOM KANAN */}
-          <div className="hidden md:flex flex-col justify-between items-end w-[180px] sm:w-[220px] lg:w-[260px] xl:w-[320px]">
+          <div
+            className="
+              flex flex-col justify-center items-end
+              gap-4
+              w-[130px] sm:w-[160px] md:w-[210px] lg:w-[230px] xl:w-[260px]
+            "
+          >
             {/* Wayang kanan (atas) */}
-            <div className="relative -mr-4 md:-mr-8 mt-32 fade-in-right">
+            <div className="relative -mr-4 sm:-mr-6 fade-in-right">
               <Image
-                src="/image/wayang.png" // boleh pakai file yang sama
+                src="/image/wayang.png"
                 alt="Ilustrasi Wayang Pagelaran"
                 width={500}
                 height={500}
-                className="w-full h-auto drop-shadow-2xl scale-x-[-1] -rotate-[8deg] scale-125" // dibalik supaya saling menghadap
+                className="
+                  w-full h-auto drop-shadow-2xl
+                  scale-x-[-1]
+                  -rotate-[4deg]
+                  scale-110 sm:scale-120 md:scale-135
+                "
               />
             </div>
 
             {/* Gerabah kanan (bawah) */}
-            <div className="relative -mr-4 md:-mr-8 mb-[-10px] fade-in-right">
+            <div className="relative -mr-4 sm:-mr-6 fade-in-right mt-100">
               <Image
-                src="/image/kendi.png" // stack gerabah kanan
+                src="/image/kendi.png"
                 alt="Ilustrasi Gerabah Pagelaran"
                 width={500}
                 height={500}
-                className="w-full h-auto drop-shadow-2xl scale-x-[-1]"
+                className="
+                  w-full h-auto drop-shadow-2xl
+                  scale-x-[-1]
+                  scale-105 sm:scale-115 md:scale-125
+                "
               />
             </div>
           </div>
         </div>
 
         {/* Konten tengah */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-          <p className="text-s md:text-sm font-bold tracking-[0.25em] uppercase text-slate-700">
+        <div className="relative z-20 max-w-6xl mx-auto px-6 text-center">
+          <p className="text-[11px] md:text-sm font-bold tracking-[0.25em] uppercase text-slate-700">
             Ciptakan Kenangan Tak Terlupakan Bersama Kami
           </p>
 
@@ -109,11 +135,13 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-6 text-base md:text-lg text-slate-800">
-            Desa Eduwisata Pagelaran : Eksotisme Kampung Seni Budaya Mentaraman & Warisan Kerajinan Gerabah Tradisional
+            Desa Eduwisata Pagelaran : Eksotisme Kampung Seni Budaya Mentaraman
+            &amp; Warisan Kerajinan Gerabah Tradisional
           </p>
 
           <p className="text-base md:text-lg text-slate-800">
-            Nikmati pengalaman perjalanan yang mengesankan di kampung seni dan budaya Pagelaran
+            Nikmati pengalaman perjalanan yang mengesankan di kampung seni dan
+            budaya Pagelaran
           </p>
 
           <div className="mt-10 flex justify-center">
@@ -127,8 +155,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator di bawah */}
-        {/* <div className="absolute bottom-8 inset-x-0 flex justify-center">
+        {/* Scroll indicator di bawah (opsional) */}
+        {/* 
+        <div className="absolute bottom-8 inset-x-0 flex justify-center z-20">
           <div className="flex flex-col items-center gap-3 text-[#e98228]">
             <span className="text-[10px] tracking-[0.25em] uppercase">
               Scroll
@@ -137,11 +166,13 @@ export default function HomePage() {
               <span className="h-2 w-2 rounded-full bg-[#e98228] animate-bounce" />
             </div>
           </div>
-        </div> */}
+        </div>
+        */}
       </section>
 
       {/* SECTION BERIKUTNYA (contoh) */}
-      {/* <section id="about" className="py-24 bg-white">
+      {/* 
+      <section id="about" className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-slate-900">
             Tentang Desa Seni Sitaran
@@ -150,7 +181,8 @@ export default function HomePage() {
             (Tulis deskripsi desa di sini…)
           </p>
         </div>
-      </section> */}
+      </section>
+      */}
     </main>
   );
 }
