@@ -46,12 +46,12 @@ export default function HomePage() {
           <div
             className="
               flex flex-col justify-center items-start
-              gap-4
-              w-[130px] sm:w-[160px] md:w-[210px] lg:w-[230px] xl:w-[260px]
+              gap-3 md:gap-4
+              w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px]
             "
           >
             {/* Wayang kiri (atas) */}
-            <div className="relative -ml-4 sm:-ml-6 fade-in-left">
+            <div className="relative -ml-2 md:-ml-4 lg:-ml-6 mt-2 md:mt-34 lg:mt-40 fade-in-left">
               <Image
                 src="/image/wayang.png"
                 alt="Ilustrasi Wayang Pagelaran"
@@ -66,7 +66,7 @@ export default function HomePage() {
             </div>
 
             {/* Gerabah kiri (bawah) */}
-            <div className="relative -ml-4 sm:-ml-6 fade-in-left mt-100">
+            <div className="relative -ml-2 md:-ml-4 lg:-ml-6 mt-82 md:mt-74 lg:mt-45 fade-in-left">
               <Image
                 src="/image/kendi.png"
                 alt="Ilustrasi Gerabah Pagelaran"
@@ -84,20 +84,23 @@ export default function HomePage() {
           <div
             className="
               flex flex-col justify-center items-end
-              gap-4
-              w-[130px] sm:w-[160px] md:w-[210px] lg:w-[230px] xl:w-[260px]
+              gap-3 md:gap-4
+              w-[140px] md:w-[180px] lg:w-[220px] xl:w-[260px]
+              transform-gpu
             "
           >
             {/* Wayang kanan (atas) */}
-            <div className="relative -mr-4 sm:-mr-6 fade-in-right">
+            <div className="relative -mr-2 md:-mr-4 lg:-mr-6 mt-2 md:mt-34 lg:mt-40 fade-in-right">
               <Image
                 src="/image/wayang.png"
                 alt="Ilustrasi Wayang Pagelaran"
                 width={500}
                 height={500}
+                style={{
+                  transform: "scaleX(-1)",
+                }}
                 className="
                   w-full h-auto drop-shadow-2xl
-                  scale-x-[-1]
                   -rotate-[4deg]
                   scale-110 sm:scale-120 md:scale-135
                 "
@@ -105,15 +108,17 @@ export default function HomePage() {
             </div>
 
             {/* Gerabah kanan (bawah) */}
-            <div className="relative -mr-4 sm:-mr-6 fade-in-right mt-100">
+            <div className="relative -mr-2 md:-mr-4 lg:-mr-6 mt-82 md:mt-74 lg:mt-45 fade-in-right">
               <Image
                 src="/image/kendi.png"
                 alt="Ilustrasi Gerabah Pagelaran"
                 width={500}
                 height={500}
+                style={{
+                  transform: "scaleX(-1)",
+                }}
                 className="
                   w-full h-auto drop-shadow-2xl
-                  scale-x-[-1]
                   scale-105 sm:scale-115 md:scale-125
                 "
               />
@@ -123,8 +128,23 @@ export default function HomePage() {
 
         {/* Konten tengah */}
         <div className="relative z-20 max-w-6xl mx-auto px-6 text-center">
-          <p className="text-[11px] md:text-sm font-bold tracking-[0.25em] uppercase text-slate-700">
-            Ciptakan Kenangan Tak Terlupakan Bersama Kami
+          <p
+            className="
+              inline-flex items-center gap-2 
+              rounded-full 
+              bg-[#FFF7F0]/80
+              px-4 py-1 
+              text-[11px] md:text-sm 
+              font-semibold 
+              uppercase 
+              tracking-[0.16em] 
+              text-[#D48454]
+              drop-shadow-lg
+            "
+          >
+            Ciptakan Kenangan Tak Terlupakan 
+            <br />
+            Bersama Kami
           </p>
 
           <h1 className="mt-4 text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight text-slate-900">
