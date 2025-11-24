@@ -1,0 +1,156 @@
+// src/app/page.tsx
+import Image from "next/image";
+import { ArrowDown } from "lucide-react";
+
+import { Kaushan_Script } from "next/font/google";
+
+import type { Metadata } from "next";
+
+const kaushan = Kaushan_Script({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export const metadata: Metadata = {
+  title: "SITARAN - Sistem Informasi Wisata Pagelaran",
+  description:
+    "Pembahasan lengkap tentang seni budaya Mentaraman di Desa Pagelaran: karawitan, wayang, tari tradisional, hingga tradisi selamatan.",
+  alternates: {
+    canonical: "/sistem-informasi-wisata-pagelaran",
+  },
+};
+
+export default function HomePage() {
+  return (
+    <main className="relative min-h-screen">
+      {/* HERO SECTION */}
+      <section
+        id="hero"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/image/pagelaran.jpg"
+            alt="Gerbang Desa Seni Sitaran"
+            fill
+            priority
+            className="object-cover"
+          />
+
+          {/* Overlay gradasi putih supaya teks lebih kebaca */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/70 to-white" />
+        </div>
+
+          {/* ILUSTRASI KIRI & KANAN (4 gambar) */}
+        <div className="pointer-events-none absolute inset-0 flex items-stretch justify-between z-10">
+          {/* KOLOM KIRI */}
+          <div className="hidden md:flex flex-col justify-between items-start w-[180px] sm:w-[220px] lg:w-[260px] xl:w-[320px]">
+            {/* Wayang kiri (atas) */}
+            <div className="relative -ml-4 md:-ml-8 mt-32 fade-in-left ">
+              <Image
+                src="/image/wayang.png" // ganti dengan file wayang kirimu
+                alt="Ilustrasi Wayang Pagelaran"
+                width={500}
+                height={500}
+                className="w-full h-auto drop-shadow-2xl rotate-[8deg] scale-125"
+              />
+            </div>
+
+            {/* Gerabah kiri (bawah) */}
+            <div className="relative -ml-4 md:-ml-8 mb-[-10px] fade-in-left">
+              <Image
+                src="/image/kendi.png" // stack gerabah kiri
+                alt="Ilustrasi Gerabah Pagelaran"
+                width={500}
+                height={500}
+                className="w-full h-auto drop-shadow-2xl"
+              />
+            </div>
+          </div>
+
+          {/* KOLOM KANAN */}
+          <div className="hidden md:flex flex-col justify-between items-end w-[180px] sm:w-[220px] lg:w-[260px] xl:w-[320px]">
+            {/* Wayang kanan (atas) */}
+            <div className="relative -mr-4 md:-mr-8 mt-32 fade-in-right">
+              <Image
+                src="/image/wayang.png" // boleh pakai file yang sama
+                alt="Ilustrasi Wayang Pagelaran"
+                width={500}
+                height={500}
+                className="w-full h-auto drop-shadow-2xl scale-x-[-1] -rotate-[8deg] scale-125" // dibalik supaya saling menghadap
+              />
+            </div>
+
+            {/* Gerabah kanan (bawah) */}
+            <div className="relative -mr-4 md:-mr-8 mb-[-10px] fade-in-right">
+              <Image
+                src="/image/kendi.png" // stack gerabah kanan
+                alt="Ilustrasi Gerabah Pagelaran"
+                width={500}
+                height={500}
+                className="w-full h-auto drop-shadow-2xl scale-x-[-1]"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Konten tengah */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+          <p className="text-s md:text-sm font-bold tracking-[0.25em] uppercase text-slate-700">
+            Ciptakan Kenangan Tak Terlupakan Bersama Kami
+          </p>
+
+          <h1 className="mt-4 text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight text-slate-900">
+            JELAJAHI DESA EDUWISATA{" "}
+            <span className={`${kaushan.className} block text-[#e98228]`}>
+              PAGELARAN
+            </span>
+          </h1>
+
+          <p className="mt-6 text-base md:text-lg text-slate-800">
+            Desa Eduwisata Pagelaran : Eksotisme Kampung Seni Budaya Mentaraman & Warisan Kerajinan Gerabah Tradisional
+          </p>
+
+          <p className="text-base md:text-lg text-slate-800">
+            Nikmati pengalaman perjalanan yang mengesankan di kampung seni dan budaya Pagelaran
+          </p>
+
+          <div className="mt-10 flex justify-center">
+            <a
+              href="#about"
+              className="inline-flex items-center gap-2 rounded-full bg-[#e98228] px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-[#cf701a] transition-colors"
+            >
+              Jelajahi Desa
+              <ArrowDown className="h-4 w-4 animate-bounce-slow" />
+            </a>
+          </div>
+        </div>
+
+        {/* Scroll indicator di bawah */}
+        {/* <div className="absolute bottom-8 inset-x-0 flex justify-center">
+          <div className="flex flex-col items-center gap-3 text-[#e98228]">
+            <span className="text-[10px] tracking-[0.25em] uppercase">
+              Scroll
+            </span>
+            <div className="h-10 w-6 rounded-full border border-[#e98228]/70 flex items-start justify-center p-1">
+              <span className="h-2 w-2 rounded-full bg-[#e98228] animate-bounce" />
+            </div>
+          </div>
+        </div> */}
+      </section>
+
+      {/* SECTION BERIKUTNYA (contoh) */}
+      {/* <section id="about" className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-slate-900">
+            Tentang Desa Seni Sitaran
+          </h2>
+          <p className="mt-4 text-slate-700">
+            (Tulis deskripsi desa di sini…)
+          </p>
+        </div>
+      </section> */}
+    </main>
+  );
+}
