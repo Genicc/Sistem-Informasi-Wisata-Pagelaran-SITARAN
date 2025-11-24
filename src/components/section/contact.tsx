@@ -7,8 +7,8 @@ import {
     MapPin,
     // Clock,
     // Facebook,
-    // Instagram,
-    // Youtube,
+    Instagram,
+    Music2,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -40,9 +40,21 @@ const contactInfo: ContactItem[] = [
         link: "mailto:sendayamentaraman@gmail.com",
     },
     {
+        icon: Instagram,
+        label: "Instagram",
+        value: "@dusunmentaraman",
+        link: "https://www.instagram.com/dusunmentaraman/",
+    },
+    {
+        icon: Music2,
+        label: "TikTok",
+        value: "dusun.mentaraman",
+        link: "https://www.tiktok.com/@dusun.mentaraman?_r=1&_t=ZS-91eyf7Yy0gr",
+    },
+    {
         icon: MapPin,
         label: "Alamat",
-        value: "Jl. Suropati, Kec. Pagelaran, Kab. Malang, Jawa Timur",
+        value: "Pagelaran Kidul, Pagelaran, Kec. Pagelaran, Kabupaten Malang, Jawa Timur 65174",
     },
     // {
     //     icon: Clock,

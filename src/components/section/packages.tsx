@@ -24,18 +24,18 @@ const villages: Record<
 > = {
   desaA: {
     name: "Kampung Eduwisata Mentaraman",
-    subtitle: "Wisata edukasi, alam, dan budaya",
-    highlight: "Cocok untuk kunjungan sekolah, komunitas, dan keluarga.",
+    subtitle: "Wisata Edukasi, Alam, dan Budaya",
+    highlight: "Cocok Untuk Kunjungan Sekolah, Komunitas, dan Keluarga.",
     packages: [
       {
         name: "Paket Kenong",
         duration: "Half Day",
         activities: [
           "Kirab (Tari Gambyong)",
-          "Pertunjukan seni budaya (Dagelan)",
-          "Edukasi gamelan dan gending",
-          "Minuman dan camilan",
-          "Nasi liwet jangan wedang",
+          "Pertunjukan Seni Budaya (Dagelan)",
+          "Edukasi Gamelan dan Gending",
+          "Minuman dan Camilan",
+          "Nasi Liwet Jangan Wedang",
         ],
         price: "Mulai dari Rp85.000/orang",
         level: "Hemat",
@@ -45,11 +45,11 @@ const villages: Record<
         duration: "Full Day",
         activities: [
           "Kirab (Tari Remo)",
-          "Pertunjukan seni budaya (Wayang Suluh)",
-          "Edukasi gamelan dan gending",
-          "Minuman dan camilan",
-          "Nasi liwet jangan wedang",
-          "Souvenir khas desa",
+          "Pertunjukan Seni Budaya (Wayang Suluh)",
+          "Edukasi Gamelan dan Gending",
+          "Minuman dan Camilan",
+          "Nasi Liwet Jangan Wedang",
+          "Souvenir Khas Desa",
         ],
         price: "Mulai dari Rp120.000/orang",
         level: "Standar",
@@ -59,12 +59,12 @@ const villages: Record<
         duration: "Full Day",
         activities: [
           "Kirab (Tari Gerabah)",
-          "Pertunjukan seni budaya (Kentrung)",
-          "Edukasi gamelan dan gending",
-          "Minuman dan camilan",
-          "Nasi liwet jangan wedang",
-          "Souvenir khas desa",
-          "Homestay experience",
+          "Pertunjukan Seni Budaya (Kentrung)",
+          "Edukasi Gamelan dan Gending",
+          "Minuman dan Camilan",
+          "Nasi Liwet Jangan Wedang",
+          "Souvenir Khas Desa",
+          "Homestay Experience",
         ],
         price: "Mulai dari Rp150.000/orang",
         level: "Premium",
@@ -73,38 +73,52 @@ const villages: Record<
   },
   desaB: {
     name: "Kampung Eduwisata Gerabah",
-    subtitle: "Eksplorasi kriya, seni, dan kerajinan lokal",
-    highlight: "Ideal untuk study tour, UMKM, dan pelatihan kreatif.",
+    subtitle: "Eksplorasi Kriya, Seni, dan Kerajinan Lokal",
+    highlight: "Ideal Untuk Study Tour, UMKM, dan Pelatihan Kreatif.",
     packages: [
       {
-        name: "Paket Workshop Gerabah",
+        name: "Paket Wisata Standart",
         duration: "Half Day",
         activities: [
-          "Tur galeri gerabah",
-          "Praktik membuat gerabah",
-          "Foto hasil karya",
+          "Kedatangan dan Penyambutan",
+          "Eksplorasi Proses Pembuatan Gerabah",
+          "Mengenal Produk Seni Budaya Lokal",
+          "Pusat Oleh-oleh Produk UMKM",
         ],
         price: "Mulai dari Rp90.000/orang",
         level: "Hemat",
       },
       {
-        name: "Paket Seni & Kreatif",
+        name: "Paket Wisata Menengah",
         duration: "Full Day",
         activities: [
-          "Workshop melukis",
-          "Kunjungan galeri seni",
-          "Sesi diskusi kreatif",
+          "Kedatangan dan Penyambutan",
+          "Sejarah Singkat Kampung Gerabah",
+          "Workshop Pembuatan Gerabah Sederhana",
+          "Menikmati Kuliner Khas Mentaraman",
+          "Edukasi Gamelan dan Gending",
+          "Hidangan Tradisional",
+          "Souvenir Khas Mentaraman",
+          "Pusat Oleh-oleh Produk UMKM",
         ],
         price: "Mulai dari Rp130.000/orang",
         level: "Standar",
       },
       {
-        name: "Paket UMKM & Kuliner",
+        name: "Paket Wisata Lengkap",
         duration: "Full Day",
         activities: [
-          "Tur UMKM lokal",
-          "Cicip kuliner khas",
-          "Sharing session branding",
+          "Kedatangan dan Penyambutan",
+          "Eksplorasi Sederhana Proses Pembuatan Gerabah",
+          "Mengenal Produk Seni Budaya Tradisional",
+          "Menikmati Kuliner Khas Mentaraman",
+          "Edukasi Gamelan dan Gending",
+          "Hidangan Tradisional",
+          "Bermalam di Rumah Singgah",
+          "Hidangan Malam dengan Menu Lokal",
+          "Pertunjukan Karawitan Eksklusif",
+          "Souvenir Khas Mentaraman",
+          "Pusat Oleh-oleh Produk UMKM",
         ],
         price: "Mulai dari Rp145.000/orang",
         level: "Premium",
@@ -238,8 +252,8 @@ export default function TourPackages() {
               <span className="text-[#D98454]">Paket Wisata</span>
             </h2>
             <p className="mt-4 text-sm md:text-base leading-relaxed text-[#8a7461]">
-              Sesuaikan kebutuhan kunjungan Anda dengan pilihan paket dari desa
-              eduwisata dan desa seni.
+              Sesuaikan Kebutuhan Kunjungan Anda dengan Pilihan Paket dari Desa
+              EduWisata dan Desa Seni.
             </p>
           </div>
 

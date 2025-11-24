@@ -26,7 +26,7 @@ export default function AboutSection() {
         >
         <div className="mx-auto max-w-6xl px-4 md:px-8">
             {/* Header Section */}
-                <div className="mx-auto max-w-3xl text-center">
+                <div className="mx-auto max-w-5xl text-center">
                     {/* Badge atas */}
                     <p className="
                         inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
@@ -40,13 +40,31 @@ export default function AboutSection() {
                     </h2>
 
                     {/* Paragraf */}
-                    <p className="mt-4 text-sm md:text-base leading-relaxed text-[#8a7461]">
-                        Pagelaran adalah sebuah kecamatan di Kabupaten Malang, Provinsi Jawa Timur, Indonesia. 
-                        Kecamatan ini berjarak sekitar 12 Km dari Ibu Kota Kabupaten Malang ke arah tenggara 
-                        melalui Gondanglegi yang memiliki Pusat Pemerintahan di Desa Pagelaran.
-                        Desa Pagelaran mengadaptasi seni dan budaya dari Yogyakarta, hal ini berawal pembabatan 
-                        hutan glagah yang dilakukan oleh penduduk migrasi dari Mentaram, Yogyakarta.
-                    </p>
+                    <div className="mt-4 md:mt-6 mx-auto max-w-5xl text-sm md:text-base leading-relaxed text-[#3b2a20] text-justify space-y-5">
+                        <p>
+                            <span className="inline-block text-4xl md:text-5xl font-extrabold text-[#D98454] mr-0.5 align-bottom">
+                            D
+                            </span>
+                            esa Pagelaran merupakan salah satu desa di Kabupaten Malang yang memiliki 
+                            posisi strategis sebagai jalur penghubung menuju kawasan wisata pantai selatan seperti 
+                            Balekambang, Kondang Merak, dan Ngliyep. Memiliki luas wilayah sekitar 4,24 km² dan terdiri atas empat dusun, 
+                            desa ini dikenal sebagai wilayah yang kaya akan seni dan budaya tradisional, seperti karawitan, 
+                            wayang, kentrung, ludruk, campursari, ketoprak, dan tari. 
+                            Desa ini berjarak sekitar 12 Km dari Ibu Kota Kabupaten Malang ke arah tenggara 
+                            melalui Gondanglegi yang memiliki Pusat Pemerintahan di Desa Pagelaran.
+                            Salah satu dusunnya, yaitu Dusun Mentaraman, menjadi pusat aktivitas seni dengan lebih dari 300 pelaku seni lintas generasi. 
+                            Kekayaan seni dan budaya tersebut menjadikan Desa Pagelaran diresmikan sebagai “Kampung Eduwisata Seni dan Budaya”.
+                        </p>
+
+                        <p>
+                            Selain potensi seni, desa ini juga memiliki daya tarik berupa rumah-rumah berarsitektur Jawa kuno yang masih terawat, 
+                            serta kehidupan masyarakat yang menjunjung tinggi adat dan tradisi lokal.
+                            Keharmonisan sosial, lingkungan yang bersih, serta ikatan kekeluargaan yang kuat menjadi modal penting dalam pengembangan desa 
+                            sebagai destinasi wisata berbasis budaya dan kearifan lokal.
+                        </p>
+                    </div>
+
+
                 </div>
 
                 {/* Garis aksen */}
