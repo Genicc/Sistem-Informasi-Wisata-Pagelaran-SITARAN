@@ -56,7 +56,7 @@ export default function LocalProductsSection() {
     const rest = products.slice(fullRowCount);        // sisa 0, 1, atau 2 item
 
     return (
-        <section id="products" className="relative py-20 bg-gradient-to-b from-[#DDEDE4] via-[#EFE6FF] to-[#EFE6FF]">
+        <section id="products" className="relative py-20 bg-gradient-to-b from-[#D4F3E4]/65 via-[#D4F3E4]/75 to-[#D4F3E4]/85">
         <div className="mx-auto max-w-6xl px-4 md:px-8">
             {/* Heading */}
             <div className="mx-auto max-w-4xl text-center">

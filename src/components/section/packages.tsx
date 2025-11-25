@@ -241,7 +241,7 @@ export default function TourPackages() {
   return (
     <>
       {/* SECTION: PAKET WISATA */}
-      <section id="packages" className="w-full bg-gradient-to-b from-[#EFE6FF] via-[#F3D1C9] to-[#F3D1C9] py-16 md:py-24">
+      <section id="packages" className="w-full bg-gradient-to-b from-[#D4F3E4]/85 via-[#FFE9D9]/55 to-[#FFE9D9]/65 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
@@ -355,7 +355,7 @@ export default function TourPackages() {
       </section>
 
       {/* SECTION: FORM PEMESANAN */}
-      <section id="booking" className="w-full bg-gradient-to-b from-[#F3D1C9] via-[#FFF7D6] to-[#FFF7D6] py-16 md:py-24">
+      <section id="booking" className="w-full bg-gradient-to-b from-[#FFE9D9]/65 via-[#FFE9D9]/75 to-[#FFE9D9]/85 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">

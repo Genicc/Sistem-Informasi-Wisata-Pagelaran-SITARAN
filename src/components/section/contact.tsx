@@ -75,7 +75,7 @@ const ContactSection = () => {
         id="contact"
         className="
             w-full 
-            bg-gradient-to-b from-[#FFF7D6] via-[#F3E4C8] to-[#F3E4C8]
+            bg-gradient-to-b from-[#FFE9D9]/85 via-[#FFF7D6]/55 to-[#FFF7D6]/65
             py-20 lg:py-24 
             min-h-screen
         "
@@ -181,7 +181,7 @@ const ContactSection = () => {
                         Lokasi Kami
                     </h3>
 
-                    <Card className="border-0 rounded-2xl bg-[#f4ece3] shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+                    <Card className="border-0 rounded-2xl bg-[#f7e6c3] shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
                         <CardContent className="px-3 py-1">
                         
                         {/* MAP */}

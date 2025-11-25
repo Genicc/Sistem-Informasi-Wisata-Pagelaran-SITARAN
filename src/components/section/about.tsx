@@ -19,8 +19,8 @@ export default function AboutSection() {
             relative 
             bg-gradient-to-b 
             from-white/70 
-            via-[#fff8f3] 
-            to-[#fff2ea]
+            via-[#DDEBF5]/35 
+            to-[#DDEBF5]/65
             py-20 md:py-24
         "
         >

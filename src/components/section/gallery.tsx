@@ -13,12 +13,12 @@ export async function GallerySection() {
     return (
         <section
         id="gallery"
-        className="relative bg-gradient-to-b from-[#E3F2FD] via-[#DDEDE4] to-[#DDEDE4] py-16 md:py-24"
+        className="relative bg-gradient-to-b from-[#DDEBF5]/85 via-[#D4F3E4]/55 to-[#D4F3E4]/65 py-16 md:py-24"
         >
         {/* Background dekoratif halus */}
         <div className="pointer-events-none absolute inset-0 opacity-60">
-            <div className="absolute -top-10 -left-10 h-40 w-40 rounded-full bg-[#fbd0a6] blur-3xl" />
-            <div className="absolute bottom-0 right-0 h-52 w-52 rounded-full bg-[#f5b782] blur-3xl" />
+            <div className="absolute -top-10 -left-10 h-40 w-40 rounded-full bg-[#DDEDE4] blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-52 w-52 rounded-full bg-[#E3F2FD] blur-3xl" />
         </div>
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
