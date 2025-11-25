@@ -100,7 +100,7 @@ export default function AboutSection() {
                                 className="
                                     absolute 
                                     top-0 left-1/2 -translate-x-1/2
-                                    w-60 md:w-92 
+                                    w-70 md:w-92 
                                     opacity-75 
                                     pointer-events-none 
                                     z-0
