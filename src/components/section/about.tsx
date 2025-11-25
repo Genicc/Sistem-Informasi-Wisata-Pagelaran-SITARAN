@@ -1,14 +1,14 @@
 export default function AboutSection() {
     const villages = [
         {
-        title: "Kampung Mentaraman",
+        title: "KAMPUNG SENI DAN BUDAYA MENTARAMAN",
         description:
-            "Kampung Mentaraman, sebuah permata tersembunyi di Desa Pagelaran, Kabupaten Malang, menawarkan pesona budaya yang memikat. Dengan akar sejarah yang kuat dan warisan Kerajaan Mataram, dusun ini menjadi rumah bagi beragam kesenian tradisional yang masih hidup hingga kini. Dari alunan merdu karawitan hingga tarian-tarian klasik, Mentaraman adalah surga bagi para pencinta seni dan budaya Jawa. Keindahan alam yang masih asri semakin melengkapi pesona dusun ini, menjadikannya destinasi yang sempurna bagi mereka yang ingin melarikan diri dari hiruk pikuk kota.",
+            "Kampung Seni dan Budaya Mentaraman, sebuah permata tersembunyi di Desa Pagelaran, Kabupaten Malang, menawarkan pesona budaya yang memikat. Dengan akar sejarah yang kuat dan warisan Kerajaan Mataram, dusun ini menjadi rumah bagi beragam kesenian tradisional yang masih hidup hingga kini. Dari alunan merdu karawitan hingga tarian-tarian klasik, Mentaraman adalah surga bagi para pencinta seni dan budaya Jawa. Keindahan alam yang masih asri semakin melengkapi pesona dusun ini, menjadikannya destinasi yang sempurna bagi mereka yang ingin melarikan diri dari hiruk pikuk kota.",
         },
         {
-        title: "Kampung Gerabah",
+        title: "KAMPUNG GERABAH KRAJAN",
         description:
-            "Kampung Gerabah di Kabupaten Malang merupakan sentra kerajinan tradisional yang masih mempertahankan warisan budaya pembuatan gerabah secara turun-temurun. Di tempat ini, pengunjung dapat melihat langsung proses pembentukan tanah liat menjadi karya seni bernilai tinggi—mulai dari kendi, vas, pot bunga, hingga hiasan rumah. Suasana kampung yang khas, dipenuhi deretan pengrajin aktif, menciptakan pengalaman edukatif sekaligus wisata budaya yang autentik. Selain membeli produk, pengunjung juga dapat mengikuti workshop membuat gerabah sendiri, menjadikannya destinasi menarik bagi pecinta seni, keluarga, dan pelajar.",
+            "Kampung Gerabah Krajan di Kabupaten Malang merupakan sentra kerajinan tradisional yang masih mempertahankan warisan budaya pembuatan gerabah secara turun-temurun. Di tempat ini, pengunjung dapat melihat langsung proses pembentukan tanah liat menjadi karya seni bernilai tinggi—mulai dari kendi, vas, pot bunga, hingga hiasan rumah. Suasana kampung yang khas, dipenuhi deretan pengrajin aktif, menciptakan pengalaman edukatif sekaligus wisata budaya yang autentik. Selain membeli produk, pengunjung juga dapat mengikuti workshop membuat gerabah sendiri, menjadikannya destinasi menarik bagi pecinta seni, keluarga, dan pelajar.",
         },
     ];
 
@@ -52,7 +52,7 @@ export default function AboutSection() {
                             wayang, kentrung, ludruk, campursari, ketoprak, dan tari. 
                             Desa ini berjarak sekitar 12 Km dari Ibu Kota Kabupaten Malang ke arah tenggara 
                             melalui Gondanglegi yang memiliki Pusat Pemerintahan di Desa Pagelaran.
-                            Salah satu dusunnya, yaitu Dusun Mentaraman, menjadi pusat aktivitas seni dengan lebih dari 300 pelaku seni lintas generasi. 
+                            Salah satu kampungnya, yaitu Kampung Seni dan Budaya Mentaraman menjadi pusat aktivitas seni dengan lebih dari 300 pelaku seni lintas generasi. 
                             Kekayaan seni dan budaya tersebut menjadikan Desa Pagelaran diresmikan sebagai “Kampung Eduwisata Seni dan Budaya”.
                         </p>
 

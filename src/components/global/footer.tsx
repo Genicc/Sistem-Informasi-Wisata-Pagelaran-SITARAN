@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#e8c4a3] text-slate-900">
+        <footer className="bg-gradient-to-b from-[#F3E4C8] via-[#e8c4a3] to-[#e8c4a3] text-slate-900">
             <div className="mx-auto max-w-6xl px-4 md:px-8 py-10 md:py-12">
                 {/* Top: Teks kiri & logo instansi kanan */}
                 <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">

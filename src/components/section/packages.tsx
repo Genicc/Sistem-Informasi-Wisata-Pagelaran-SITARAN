@@ -23,7 +23,7 @@ const villages: Record<
   }
 > = {
   desaA: {
-    name: "Kampung Eduwisata Mentaraman",
+    name: "Kampung Seni dan Budaya Mentaraman",
     subtitle: "Wisata Edukasi, Alam, dan Budaya",
     highlight: "Cocok Untuk Kunjungan Sekolah, Komunitas, dan Keluarga.",
     packages: [
@@ -72,7 +72,7 @@ const villages: Record<
     ],
   },
   desaB: {
-    name: "Kampung Eduwisata Gerabah",
+    name: "Kampung Gerabah Krajan",
     subtitle: "Eksplorasi Kriya, Seni, dan Kerajinan Lokal",
     highlight: "Ideal Untuk Study Tour, UMKM, dan Pelatihan Kreatif.",
     packages: [
@@ -241,7 +241,7 @@ export default function TourPackages() {
   return (
     <>
       {/* SECTION: PAKET WISATA */}
-      <section id="packages" className="w-full bg-[#f4ece3] py-16 md:py-24">
+      <section id="packages" className="w-full bg-gradient-to-b from-[#EFE6FF] via-[#F3D1C9] to-[#F3D1C9] py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
@@ -355,7 +355,7 @@ export default function TourPackages() {
       </section>
 
       {/* SECTION: FORM PEMESANAN */}
-      <section id="booking" className="w-full bg-[#f4ece3] py-16 md:py-24">
+      <section id="booking" className="w-full bg-gradient-to-b from-[#F3D1C9] via-[#FFF7D6] to-[#FFF7D6] py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
@@ -480,8 +480,8 @@ export default function TourPackages() {
                   onChange={(e) => handleVillageChange(e.target.value as VillageKey)}
                   className="w-full rounded-xl border border-orange-100 bg-[#fffaf5] px-4 py-2.5 text-sm md:text-base text-[#3b2a20] focus:outline-none focus:border-[#e98228] focus:ring-1 focus:ring-[#e98228]/70"
                 >
-                  <option value="desaA">Kampung Eduwisata Mentaraman</option>
-                  <option value="desaB">Kampung Eduwisata Gerabah</option>
+                  <option value="desaA">Kampung Seni dan Budaya Mentaraman</option>
+                  <option value="desaB">Kampung Gerabah Krajan</option>
                 </select>
               </div>
 

@@ -29,7 +29,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/image/gapura_pagelaran.png"
+            src="/image/pagelaran.jpg"
             alt="Gerbang Desa Seni Sitaran"
             fill
             priority

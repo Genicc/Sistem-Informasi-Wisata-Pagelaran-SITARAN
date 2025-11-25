@@ -75,7 +75,7 @@ const ContactSection = () => {
         id="contact"
         className="
             w-full 
-            bg-gradient-to-b from-[#fbf5ef] via-[#fff7f2] to-[#fbf3ea]
+            bg-gradient-to-b from-[#FFF7D6] via-[#F3E4C8] to-[#F3E4C8]
             py-20 lg:py-24 
             min-h-screen
         "

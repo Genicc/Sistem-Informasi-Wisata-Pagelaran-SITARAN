@@ -129,7 +129,7 @@ export default function CultureSection() {
   return (
     <section
       id="culture"
-      className="relative bg-[#FFF8F3] py-16 md:py-24"
+      className="relative bg-gradient-to-b from-[#fff2ea] via-[#E3F2FD] to-[#E3F2FD] py-16 md:py-24"
     >
       {/* Dekorasi background lembut */}
       <div className="pointer-events-none absolute inset-0 -z-10">
