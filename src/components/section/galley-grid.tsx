@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 type DriveImage = {
@@ -38,15 +38,14 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 >
                 {/* Aspect ratio seragam */}
                 <div className="relative aspect-[4/3]">
-                    <Image
+                    <img
                     src={item.thumbnailLink}
                     alt={cleanTitle}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw,
-                            (max-width: 1200px) 50vw,
-                            25vw"
+                    // fill
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                     />
 
                     {/* Overlay */}
