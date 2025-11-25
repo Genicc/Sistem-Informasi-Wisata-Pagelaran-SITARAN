@@ -74,7 +74,7 @@ export default function AboutSection() {
 
 
             {/* Cards */}
-            <div className="mt-12 grid md:grid-cols-2 gap 8 items-stretch">
+            <div className="mt-12 grid md:grid-cols-2 gap-8 items-stretch">
                 {villages.map((item, index) => (
                     <article
                         key={index}
@@ -87,7 +87,7 @@ export default function AboutSection() {
                             bg-white
                             shadow-[0_22px_50px_rgba(0,0,0,0.06)]
                             border border-orange-50
-                            px-6 py-6 md:px-10 md:py-24 pt-4 md:pt-10
+                            px-6 py-6 md:px-10 md:py-24 pt-4 md:pt-10 
                             flex flex-col
                         "
                         >
