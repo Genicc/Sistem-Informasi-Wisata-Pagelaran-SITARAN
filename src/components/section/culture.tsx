@@ -165,14 +165,50 @@ export default function CultureSection() {
         </div>
 
         {/* 1. Tradisi & Ritual */}
-        <div className="mt-12 grid gap-10 md:grid-cols-[1.1fr,1fr] items-start">
-          <div className="rounded-3xl bg-white/90 shadow-[0_20px_55px_rgba(0,0,0,0.06)] border border-[#FFE6D2] px-6 py-7 md:px-8 md:py-9">
+        <div className="relative mt-12 grid gap-10 md:grid-cols-[1.1fr,1fr] items-start">
+
+          {/* === DESKTOP ILLUSTRATION (DI KIRI) === */}
+          <div
+            className="
+              hidden md:block
+              absolute 
+              -left-95 
+              top-1/2 
+              -translate-y-1/2 
+              w-[32%] 
+              h-[75%] 
+              overflow-hidden 
+              pointer-events-none 
+              opacity-90
+            "
+          >
+            <img
+              src="/image/tumpeng.png"
+              className="w-full h-full object-cover object-left"
+            />
+          </div>
+
+          {/* === CARD UTAMA === */}
+          <div className="relative rounded-3xl bg-white/90 shadow-[0_20px_55px_rgba(0,0,0,0.06)] border border-[#FFE6D2] px-6 py-7 md:px-8 md:py-9 overflow-hidden">
+
+          {/* === MOBILE BACKGROUND (DI BELAKANG CARD) === */}
+          <div className="absolute inset-0 md:hidden opacity-25 pointer-events-none">
+            <img
+              src="/image/tumpeng.png"
+              className="w-[90%] h-[35%] object-cover items-center mx-auto mt-30"
+            />
+          </div>
+
+          {/* === ISI CARD === */}
+          <div className="relative z-10">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b2967d]">
               1 • Tradisi dan Ritual Kehidupan
             </p>
+
             <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#3b2a20]">
               Nadi Budaya Pagelaran
             </h3>
+
             <p className="mt-2 text-sm md:text-base text-[#8a7461]">
               Di Pagelaran, budaya adalah tuntunan. Ritual-ritual yang
               mengiringi siklus kehidupan dan alam menjadi fondasi harmoni
@@ -183,172 +219,207 @@ export default function CultureSection() {
               {traditions.map((item) => (
                 <li key={item.title} className="flex gap-3">
                   <div className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-gradient-to-br from-[#E6A56E] to-[#D98454]" />
-                    <div>
-                      <p className="text-sm md:text-base font-semibold text-[#3b2a20]">
-                        {item.title}
-                      </p>
-                      <p className="mt-1 text-xs md:text-base text-[#8a7461]">
-                        {item.description}
-                      </p>
-                    </div>
+                  <div>
+                    <p className="text-sm md:text-base font-semibold text-[#3b2a20]">
+                      {item.title}
+                    </p>
+                    <p className="mt-1 text-xs md:text-base text-[#8a7461]">
+                      {item.description}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Ilustrasi / foto tradisi */}
-          {/* <div className="flex flex-col gap-4">
-            <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-3xl shadow-[0_22px_55px_rgba(0,0,0,0.08)] border border-[#FFE0C2] bg-[#F8EBE0]">
-              <Image
-                src="/image/tradisi-pagelaran.jpg"
-                alt="Tradisi dan ritual adat Desa Pagelaran"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#FFE7D3]">
-                  Momen Kebersamaan
-                </p>
-                <p className="mt-1 text-sm md:text-base font-semibold text-white">
-                  Selamatan, ruwatan, dan syukuran panen menjadi jembatan
-                  antar generasi di Desa Pagelaran.
-                </p>
-              </div>
-            </div>
-          </div> */}
         </div>
+      </div>
 
         {/* 2. Kampung Gerabah */}
-        <div className="mt-14 grid gap-10 md:grid-cols-[1fr,1.1fr] items-start">
-            {/* Ilustrasi gerabah */}
-            {/* <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-3xl shadow-[0_22px_55px_rgba(0,0,0,0.08)] border border-[#FFE0C2] bg-[#F8EBE0]">
-                <Image
-                src="/image/kampung-gerabah.jpg"
-                alt="Perajin Kampung Gerabah Desa Pagelaran"
-                fill
-                className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#FFE7D3]">
-                    Kampung Gerabah • Pagelaran
-                </p>
-                <p className="mt-1 text-sm md:text-base font-semibold text-white">
-                    Dari tanah liat sederhana menjadi karya yang bernilai seni dan
-                    fungsional.
-                </p>
-                </div>
-            </div> */}
+        <div className="relative mt-14 grid gap-10 md:grid-cols-[1fr,1.1fr] items-start">
 
-          {/* Konten gerabah */}
-            <div className="rounded-3xl bg-white/90 shadow-[0_20px_55px_rgba(0,0,0,0.06)] border border-[#FFE6D2] px-6 py-7 md:px-8 md:py-9">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b2967d]">
-                  2 • Pusat Seni Kriya
-                </p>
-                <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#3b2a20]">
+          {/* === DESKTOP ILLUSTRATION (KANAN) === */}
+          <div
+            className="
+              hidden md:block
+              absolute 
+              -right-80        /* tinggal kamu sesuaikan dengan minus value yang kamu mau */
+              top-1/2 
+              -translate-y-1/2 
+              w-[32%] 
+              h-[75%] 
+              overflow-hidden 
+              pointer-events-none 
+              opacity-90
+            "
+          >
+            <img
+              src="/image/gerabah.png"
+              alt="Ilustrasi Gerabah"
+              className="w-full h-full object-cover object-right"
+            />
+          </div>
+
+          {/* === CARD (Konten Gerabah) === */}
+          <div className="relative rounded-3xl bg-white/90 shadow-[0_20px_55px_rgba(0,0,0,0.06)] border border-[#FFE6D2] px-6 py-7 md:px-8 md:py-9 overflow-hidden">
+
+            {/* === MOBILE ILLUSTRATION (DI BELAKANG CARD) === */}
+            <div className="absolute inset-0 md:hidden opacity-25 pointer-events-none">
+              <img
+                src="/image/gerabah.png"
+                alt="Ilustrasi Gerabah"
+                className="w-[90%] h-[35%] object-cover items-center mx-auto mt-30"
+              />
+            </div>
+
+            {/* === ISI CARD === */}
+            <div className="relative z-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b2967d]">
+                2 • Pusat Seni Kriya
+              </p>
+
+              <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#3b2a20]">
                 Kampung Gerabah – Alkimia Tanah dan Tangan
-                </h3>
-                <p className="mt-2 text-sm md:text-base text-[#8a7461]">
-                  Jauh sebelum dikenal luas, kawasan ini bernama{" "}
+              </h3>
+
+              <p className="mt-2 text-sm md:text-base text-[#8a7461]">
+                Jauh sebelum dikenal luas, kawasan ini bernama{" "}
                 <span className="font-semibold">“Desa Geta&apos;an”</span>, yang
                 mencerminkan kuatnya tradisi gerabah. Di sini, seni membentuk
                 tanah liat diwariskan turun-temurun dari generasi ke generasi.
-                </p>
+              </p>
 
-                <div className="mt-5 grid gap-4 md:grid-cols-2">
+              <div className="mt-5 grid gap-4 md:grid-cols-2">
                 {craftHighlights.map((item) => (
-                    <div
+                  <div
                     key={item.title}
                     className="rounded-2xl bg-[#FFF8F3] px-4 py-3 border border-[#FFE6D2]"
-                    >
+                  >
                     <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#D98454]">
-                        {item.title}
+                      {item.title}
                     </p>
                     <p className="mt-1 text-xs md:text-sm text-[#8a7461]">
-                        {item.description}
+                      {item.description}
                     </p>
-                    </div>
-                ))}
-                </div>
-
-                <div className="mt-5 rounded-2xl bg-gradient-to-r from-[#F6D9BE] via-[#E9B493] to-[#D99E7D] px-4 py-4 text-base md:text-lg text-[#4A3326]">
-                    <p className="font-semibold">
-                        Pengalaman Eduwisata: Dari Tanah Menjadi Karya
-                    </p>
-                    <p className="mt-1 text-xs md:text-sm">
-                        Pengunjung dapat belajar langsung dari perajin, merasakan
-                        tekstur tanah liat, dan mencoba menciptakan karya sendiri 
-                        menjadikan Kampung Gerabah sebagai kelas seni terbuka yang
-                        hidup.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        {/* 3. Panggung Budaya */}
-            <div className="mt-14 rounded-3xl bg-gradient-to-br from-[#FFF3E7] via-[#FFE6D2] to-[#F9D5B5] px-6 py-8 md:px-9 md:py-10 text-[#4A3326]">
-                <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-                    <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#D98454]">
-                        3 • Panggung Budaya Pagelaran
-                    </p>
-                    <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#4A3326]">
-                        Gema Seni Pertunjukan dari Mentaraman
-                    </h3>
-                    <p className="mt-2 text-sm md:text-base text-[#7A5A45] max-w-2.5xl">
-                        Jantung seni pertunjukan berdetak di Dusun Mentaraman, tempat
-                        para maestro melatih generasi muda. Dari gamelan, tari, hingga
-                        teater rakyat, seluruh desa menjadi panggung terbuka bagi
-                        kreativitas.
-                    </p>
-                    </div>
-                    <div className="mt-2 text-xs md:text-base text-right text-[#7A5A45]">
-                      <p className="text-xs md:text-sm font-medium italic">
-                          &quot;Seni bukan hanya hiburan, tapi cara Pagelaran bercerita
-                          pada dunia.&quot;
-                      </p>
-                    </div>
-                </div>
-
-              <div className="mt-7 grid gap-6 md:grid-cols-3">
-                {performanceGroups.map((group) => (
-                  <div
-                    key={group.category}
-                    className="rounded-2xl bg-white/80 border border-[#F0CFB0] px-4 py-4 md:px-5 md:py-5 backdrop-blur-sm"
-                  >
-                    <p className="text-base font-bold uppercase tracking-[0.14em] text-[#D98454] text-center">
-                      {group.category}
-                    </p>
-                    <div className="mt-3 space-y-3">
-                      {group.items.map((item) => (
-                        <div key={item.title}>
-                          <p className="text-sm md:text-lg font-semibold text-[#4A3326]">
-                            {item.title}
-                          </p>
-                          <p className="mt-1 text-[11px] md:text-sm leading-relaxed text-[#7A5A45]">
-                            {item.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 ))}
               </div>
 
-              {/* Catatan lokasi / highlight */}
-              <div className="mt-7 flex flex-col items-start gap-3 border-t border-[#F0CFB0] pt-5 text-[11px] md:text-sm text-[#7A5A45] md:flex-row md:items-center md:justify-between">
-                <p>
-                  Banyak pertunjukan digelar pada momen khusus seperti ruwatan,
-                  selamatan desa, pesta panen, dan festival budaya tahunan.
+              <div className="mt-5 rounded-2xl bg-gradient-to-r from-[#F6D9BE] via-[#E9B493] to-[#D99E7D] px-4 py-4 text-base md:text-lg text-[#4A3326]">
+                <p className="font-semibold">
+                  Pengalaman Eduwisata: Dari Tanah Menjadi Karya
                 </p>
-                <p className="font-semibold text-[#D98454]">
-                  Pusat kegiatan: Dusun Mentaraman • Sanggar Lestari Budaya •
-                  Sanggar Langgeng Irama
+                <p className="mt-1 text-xs md:text-sm">
+                  Pengunjung dapat belajar langsung dari perajin, merasakan
+                  tekstur tanah liat, dan mencoba menciptakan karya sendiri
+                  menjadikan Kampung Gerabah sebagai kelas seni terbuka yang
+                  hidup.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* 3. Panggung Budaya */}
+          <div className="relative mt-14">
+            {/* === DESKTOP ILLUSTRATION (DI KIRI) === */}
+            <div
+              className="
+                hidden md:block
+                absolute 
+                -left-80
+                top-1/2 
+                -translate-y-1/2 
+                w-[25%] 
+                h-[65%] 
+                overflow-hidden 
+                pointer-events-none 
+                opacity-90
+                z-0
+              "
+            >
+              <img
+                src="/image/wyg.png"
+                alt="Ilustrasi Panggung Budaya"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            {/* === CARD GRADIENT UTAMA === */}
+            <div className="relative rounded-3xl bg-gradient-to-br from-[#FFF3E7] via-[#FFE6D2] to-[#F9D5B5] px-6 py-8 md:px-9 md:py-10 text-[#4A3326] overflow-hidden">
+
+              {/* === MOBILE BACKGROUND (DI BELAKANG KONTEN) === */}
+              <div className="absolute inset-0 md:hidden opacity-25 pointer-events-none">
+                <img
+                  src="/image/wyg.png"
+                  alt="Ilustrasi Panggung Budaya"
+                  className="w-[90%] h-[40%] object-cover mx-auto mt-10"
+                />
+              </div>
+
+              {/* === ISI KONTEN (DIBUAT DI ATAS BACKGROUND) === */}
+              <div className="relative z-10">
+                <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#D98454]">
+                      3 • Panggung Budaya Pagelaran
+                    </p>
+                    <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#4A3326]">
+                      Gema Seni Pertunjukan dari Mentaraman
+                    </h3>
+                    <p className="mt-2 text-sm md:text-base text-[#7A5A45] max-w-2.5xl">
+                      Jantung seni pertunjukan berdetak di Dusun Mentaraman, tempat
+                      para maestro melatih generasi muda. Dari gamelan, tari, hingga
+                      teater rakyat, seluruh desa menjadi panggung terbuka bagi
+                      kreativitas.
+                    </p>
+                  </div>
+                  <div className="mt-2 text-xs md:text-base text-right text-[#7A5A45]">
+                    <p className="text-xs md:text-sm font-medium italic">
+                      &quot;Seni bukan hanya hiburan, tapi cara Pagelaran bercerita
+                      pada dunia.&quot;
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-7 grid gap-6 md:grid-cols-3">
+                  {performanceGroups.map((group) => (
+                    <div
+                      key={group.category}
+                      className="rounded-2xl bg-white/80 border border-[#F0CFB0] px-4 py-4 md:px-5 md:py-5 backdrop-blur-sm"
+                    >
+                      <p className="text-base font-bold uppercase tracking-[0.14em] text-[#D98454] text-center">
+                        {group.category}
+                      </p>
+                      <div className="mt-3 space-y-3">
+                        {group.items.map((item) => (
+                          <div key={item.title}>
+                            <p className="text-sm md:text-lg font-semibold text-[#4A3326]">
+                              {item.title}
+                            </p>
+                            <p className="mt-1 text-[11px] md:text-sm leading-relaxed text-[#7A5A45]">
+                              {item.description}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Catatan lokasi / highlight */}
+                <div className="mt-7 flex flex-col items-start gap-3 border-t border-[#F0CFB0] pt-5 text-[11px] md:text-sm text-[#7A5A45] md:flex-row md:items-center md:justify-between">
+                  <p>
+                    Banyak pertunjukan digelar pada momen khusus seperti ruwatan,
+                    selamatan desa, pesta panen, dan festival budaya tahunan.
+                  </p>
+                  <p className="font-semibold text-[#D98454]">
+                    Pusat kegiatan: Dusun Mentaraman • Sanggar Lestari Budaya •
+                    Sanggar Langgeng Irama
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
       </div>
     </section>

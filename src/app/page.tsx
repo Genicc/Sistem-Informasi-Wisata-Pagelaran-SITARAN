@@ -66,9 +66,9 @@ export default function HomePage() {
             </div> */}
 
             {/* Gerabah kiri (bawah) */}
-            {/* <div className="relative -ml-2 md:-ml-4 lg:-ml-6 mt-112 md:mt-84 lg:mt-65 fade-in-left">
+            {/* <div className="relative -ml-2 md:-ml-4 lg:-ml-6 mt-112 md:mt-84 lg:mt-75 fade-in-left">
               <Image
-                src="/image/gerabah2.png"
+                src="/image/gerabah.png"
                 alt="Ilustrasi Gerabah Pagelaran"
                 width={500}
                 height={500}
@@ -113,7 +113,7 @@ export default function HomePage() {
             {/* Gerabah kanan (bawah) */}
             {/* <div className="relative -mr-2 md:-mr-4 lg:-mr-6 mt-112 md:mt-84 lg:mt-65 fade-in-right">
               <Image
-                src="/image/gerabah2.png"
+                src="/image/gerabah.png"
                 alt="Ilustrasi Gerabah Pagelaran"
                 width={500}
                 height={500}

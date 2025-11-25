@@ -1,14 +1,16 @@
 export default function AboutSection() {
     const villages = [
         {
-        title: "KAMPUNG SENI DAN BUDAYA MENTARAMAN",
-        description:
-            "Kampung Seni dan Budaya Mentaraman, sebuah permata tersembunyi di Desa Pagelaran, Kabupaten Malang, menawarkan pesona budaya yang memikat. Dengan akar sejarah yang kuat dan warisan Kerajaan Mataram, dusun ini menjadi rumah bagi beragam kesenian tradisional yang masih hidup hingga kini. Dari alunan merdu karawitan hingga tarian-tarian klasik, Mentaraman adalah surga bagi para pencinta seni dan budaya Jawa. Keindahan alam yang masih asri semakin melengkapi pesona dusun ini, menjadikannya destinasi yang sempurna bagi mereka yang ingin melarikan diri dari hiruk pikuk kota.",
+            title: "KAMPUNG SENI DAN BUDAYA MENTARAMAN",
+            description:
+                "Kampung Seni dan Budaya Mentaraman, sebuah permata tersembunyi di Desa Pagelaran, Kabupaten Malang, menawarkan pesona budaya yang memikat. Dengan akar sejarah yang kuat dan warisan Kerajaan Mataram, dusun ini menjadi rumah bagi beragam kesenian tradisional yang masih hidup hingga kini. Dari alunan merdu karawitan hingga tarian-tarian klasik, Mentaraman adalah surga bagi para pencinta seni dan budaya Jawa. Keindahan alam yang masih asri semakin melengkapi pesona dusun ini, menjadikannya destinasi yang sempurna bagi mereka yang ingin melarikan diri dari hiruk pikuk kota.",
+            image: "/image/gapura-mtr.png",
         },
         {
-        title: "KAMPUNG GERABAH KRAJAN",
-        description:
-            "Kampung Gerabah Krajan di Kabupaten Malang merupakan sentra kerajinan tradisional yang masih mempertahankan warisan budaya pembuatan gerabah secara turun-temurun. Di tempat ini, pengunjung dapat melihat langsung proses pembentukan tanah liat menjadi karya seni bernilai tinggi—mulai dari kendi, vas, pot bunga, hingga hiasan rumah. Suasana kampung yang khas, dipenuhi deretan pengrajin aktif, menciptakan pengalaman edukatif sekaligus wisata budaya yang autentik. Selain membeli produk, pengunjung juga dapat mengikuti workshop membuat gerabah sendiri, menjadikannya destinasi menarik bagi pecinta seni, keluarga, dan pelajar.",
+            title: "KAMPUNG GERABAH KRAJAN",
+            description:
+                "Kampung Gerabah Krajan di Kabupaten Malang merupakan sentra kerajinan tradisional yang masih mempertahankan warisan budaya pembuatan gerabah secara turun-temurun. Di tempat ini, pengunjung dapat melihat langsung proses pembentukan tanah liat menjadi karya seni bernilai tinggi—mulai dari kendi, vas, pot bunga, hingga hiasan rumah. Suasana kampung yang khas, dipenuhi deretan pengrajin aktif, menciptakan pengalaman edukatif sekaligus wisata budaya yang autentik. Selain membeli produk, pengunjung juga dapat mengikuti workshop membuat gerabah sendiri, menjadikannya destinasi menarik bagi pecinta seni, keluarga, dan pelajar.",
+            image: "/image/gapura-grb.png",
         },
     ];
 
@@ -79,6 +81,7 @@ export default function AboutSection() {
                     <article
                         key={index}
                         className="
+                            relative
                             w-full 
                             h-full
                             md:w-[95%] 
@@ -87,10 +90,31 @@ export default function AboutSection() {
                             bg-white
                             shadow-[0_22px_50px_rgba(0,0,0,0.06)]
                             border border-orange-50
-                            px-6 py-6 md:px-10 md:py-24 pt-4 md:pt-10 
+                            px-6 py-6 md:px-10 md:py-24 pt-16 md:pt-20 
                             flex flex-col
+                            overflow-hidden
                         "
                         >
+                            {/* ==== Gambar Background Card ==== */}
+                            <div
+                                className="
+                                    absolute 
+                                    top-0 left-1/2 -translate-x-1/2
+                                    w-60 md:w-92 
+                                    opacity-75 
+                                    pointer-events-none 
+                                    z-0
+                                    mt-2 md:mt-1
+                                "
+                            >
+                                <img
+                                    src={item.image}
+                                    alt="Ilustrasi"
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+
+                        {/* ==== Konten Card ==== */}
                         <h3 className="text-xl md:text-2xl font-bold text-[#4b2b16] mb-6 text-center">
                             {item.title}
                         </h3>

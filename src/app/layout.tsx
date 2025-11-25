@@ -9,6 +9,8 @@ import LocalProducts from "@/components/section/products";
 import TourPackageSection from "@/components/section/packages";
 import CultureSection from "@/components/section/culture";
 import { GallerySection } from "@/components/section/gallery";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const siteUrl = "https://sitaran.co.id";
 
@@ -134,6 +136,8 @@ export default function RootLayout({
         <TourPackageSection />
         <ContactSection />
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
