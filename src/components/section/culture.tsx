@@ -46,9 +46,9 @@ const traditions: TraditionItem[] = [
 
 const craftHighlights: CraftHighlight[] = [
   {
-    title: "Warisan Desa Geta'an",
+    title: "Warisan Desa Dusun Krajan",
     description:
-      "Nama lama kawasan ini, 'Desa Geta'an', menjadi penanda kuat bahwa seni gerabah telah mengakar di Pagelaran sejak berabad-abad lalu.",
+      "Nama lama kawasan ini, 'Dusun Krajan', menjadi penanda kuat bahwa seni gerabah telah mengakar di Pagelaran sejak berabad-abad lalu.",
   },
   {
     title: "Teknik Tradisional",

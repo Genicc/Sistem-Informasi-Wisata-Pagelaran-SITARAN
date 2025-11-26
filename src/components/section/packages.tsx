@@ -23,7 +23,7 @@ const villages: Record<
   }
 > = {
   desaA: {
-    name: "Kampung Seni dan Budaya Mentaraman",
+    name: "Kampung Mentaraman",
     subtitle: "Wisata Edukasi, Alam, dan Budaya",
     highlight: "Cocok Untuk Kunjungan Sekolah, Komunitas, dan Keluarga.",
     packages: [
@@ -72,12 +72,12 @@ const villages: Record<
     ],
   },
   desaB: {
-    name: "Kampung Gerabah Krajan",
+    name: "Kampung Gerabah",
     subtitle: "Eksplorasi Kriya, Seni, dan Kerajinan Lokal",
     highlight: "Ideal Untuk Study Tour, UMKM, dan Pelatihan Kreatif.",
     packages: [
       {
-        name: "Paket Wisata Standart",
+        name: "Paket Tempayan",
         duration: "Half Day",
         activities: [
           "Kedatangan dan Penyambutan",
@@ -89,7 +89,7 @@ const villages: Record<
         level: "Hemat",
       },
       {
-        name: "Paket Wisata Menengah",
+        name: "Paket Anglo",
         duration: "Full Day",
         activities: [
           "Kedatangan dan Penyambutan",
@@ -105,7 +105,7 @@ const villages: Record<
         level: "Standar",
       },
       {
-        name: "Paket Wisata Lengkap",
+        name: "Paket Kuali",
         duration: "Full Day",
         activities: [
           "Kedatangan dan Penyambutan",
@@ -272,7 +272,7 @@ export default function TourPackages() {
                     : "text-[#8a7461] hover:bg-[#ffe7d3]"
                 }`}
               >
-                Kampung Mentaraman
+                Kampung Seni dan Budaya
               </button>
               <button
                 type="button"
@@ -283,7 +283,7 @@ export default function TourPackages() {
                     : "text-[#8a7461] hover:bg-[#ffe7d3]"
                 }`}
               >
-                Kampung Gerabah
+                Kampung Krajan
               </button>
             </div>
           </div>
@@ -480,8 +480,8 @@ export default function TourPackages() {
                   onChange={(e) => handleVillageChange(e.target.value as VillageKey)}
                   className="w-full rounded-xl border border-orange-100 bg-[#fffaf5] px-4 py-2.5 text-sm md:text-base text-[#3b2a20] focus:outline-none focus:border-[#e98228] focus:ring-1 focus:ring-[#e98228]/70"
                 >
-                  <option value="desaA">Kampung Seni dan Budaya Mentaraman</option>
-                  <option value="desaB">Kampung Gerabah Krajan</option>
+                  <option value="desaA">Kampung Seni dan Budaya</option>
+                  <option value="desaB">Kampung Krajan</option>
                 </select>
               </div>
 
