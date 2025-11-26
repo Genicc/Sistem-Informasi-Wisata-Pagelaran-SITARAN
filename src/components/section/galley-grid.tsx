@@ -52,13 +52,13 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.55)] via-[rgba(0,0,0,0.25)] to-transparent opacity-90" />
 
                     {/* Text pada gambar */}
-                    <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
-                    <h3 className="mt-1 text-sm md:text-base font-semibold text-white drop-shadow-md line-clamp-2">
-                        {cleanTitle}
-                    </h3>
-                    <p className="mt-1 text-[11px] md:text-xs text-[#ffe9d6] opacity-80">
-                        Desa Pagelaran
-                    </p>
+                    <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 text-center">
+                        <h3 className="mt-1 text-md md:text-lg font-semibold text-white drop-shadow-md line-clamp-2">
+                            {cleanTitle}
+                        </h3>
+                        <p className="mt-1 text-sm md:text-sm text-[#ffe9d6] opacity-80">
+                            Desa Pagelaran
+                        </p>
                     </div>
                 </div>
 
@@ -75,7 +75,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
             <Button
                 type="button"
                 onClick={() => setShowAll(!showAll)}
-                className="rounded-full bg-[#e98228] px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-[#cf701a] transition-colors"
+                className="rounded-full bg-[#e98228] px-8 py-3 text-md md:text-base font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-[#cf701a] transition-colors"
             >
                 {showAll ? "Tampilkan lebih sedikit" : "Lihat lainnya"}
             </Button>

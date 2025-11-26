@@ -167,7 +167,7 @@ export default function HomePage() {
           <div className="mt-10 flex justify-center">
             <a
               href="#about"
-              className="inline-flex items-center gap-2 rounded-full bg-[#e98228] px-8 py-3 text-sm md:text-base font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-[#cf701a] transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-[#e98228] px-8 py-3 text-md md:text-base font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-[#cf701a] transition-colors"
             >
               Jelajahi Desa
               <ArrowDown className="h-4 w-4 animate-bounce-slow" />

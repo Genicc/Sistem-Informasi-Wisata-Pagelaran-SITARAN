@@ -9,17 +9,17 @@ const Footer = () => {
                 <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
                     {/* Teks Deskripsi */}
                     <div className="max-w-xl space-y-2">
-                        <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide">
+                        <h2 className="text-3xl md:text-4xl font-extrabold tracking-wide">
                         DESA EDUWISATA PAGELARAN
                         </h2>
-                        <p className="text-sm md:text-base leading-relaxed">
+                        <p className="text-md md:text-base leading-relaxed">
                         Portal resmi SITARAN, kampung seni & gerabah Mentaraman di Desa Pagelaran, Malang. 
                         Mewadahi pelestarian seni, budaya, dan kerajinan sebagai identitas Desa Pagelaran.
                         </p>
                         {/* <p className="text-sm md:text-base leading-relaxed">
                             Mewadahi pelestarian seni, budaya, dan kerajinan sebagai identitas Desa Pagelaran.
                         </p> */}
-                        <p className="text-sm md:text-base">
+                        <p className="text-md md:text-base">
                         Desa Pagelaran, Kabupaten Malang, Jawa Timur
                         </p>
                     </div>
@@ -81,7 +81,7 @@ const Footer = () => {
                 <div className="mt-4 flex flex-col md:flex-row items-center justify-between w-full">
 
                 {/* Copyright Left */}
-                    <p className="text-xs md:text-sm text-slate-800">
+                    <p className="text-sm md:text-sm text-slate-800">
                         © 2025 Desa Pagelaran. All rights reserved.
                     </p>
 

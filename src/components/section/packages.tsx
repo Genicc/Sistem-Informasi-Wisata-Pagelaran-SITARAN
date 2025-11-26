@@ -247,11 +247,11 @@ export default function TourPackages() {
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
               Paket Wisata
             </p>
-            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+            <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
               <span className="text-[#3b2a20]">Pilihan </span>
               <span className="text-[#D98454]">Paket Wisata</span>
             </h2>
-            <p className="mt-4 text-sm md:text-base leading-relaxed text-[#8a7461]">
+            <p className="mt-4 text-base md:text-lg leading-relaxed text-[#8a7461]">
               Sesuaikan Kebutuhan Kunjungan Anda dengan Pilihan Paket dari Desa
               EduWisata dan Desa Seni.
             </p>
@@ -289,10 +289,10 @@ export default function TourPackages() {
           </div>
 
           <div className="text-center max-w-xl mx-auto mb-8 md:mb-10">
-            <h3 className="text-lg md:text-2xl font-semibold text-[#3b2a20]">
+            <h3 className="text-xl md:text-2xl font-semibold text-[#3b2a20]">
               {currentVillage.name}
             </h3>
-            <p className="mt-3 text-sm md:text-lg text-[#8a7461]">
+            <p className="mt-3 text-md md:text-lg text-[#8a7461]">
               {currentVillage.subtitle}
             </p>
             <p className="mt-1 text-md md:text-md text-[#b08a6b]">
@@ -310,7 +310,7 @@ export default function TourPackages() {
                   <div className="flex items-center justify-between gap-2">
                     <span
                       className={[
-                        "inline-flex items-center rounded-full px-5 py-2 text-[12px] font-semibold tracking-wide",
+                        "inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold tracking-wide",
                         pkg.level === "Hemat" && "bg-[#e7f6ea] text-[#277a3f]",
                         pkg.level === "Standar" && "bg-[#ffe7d3] text-[#c05e12]",
                         pkg.level === "Premium" && "bg-[#f4e9ff] text-[#6b3fb9]",
@@ -323,11 +323,11 @@ export default function TourPackages() {
                     </span>
                   </div>
 
-                  <h4 className="text-base md:text-xl font-semibold text-[#3b2a20] leading-snug">
+                  <h4 className="text-xl md:text-xl font-semibold text-[#3b2a20] leading-snug">
                     {pkg.name}
                   </h4>
 
-                  <ul className="mt-1 space-y-1.5 text-xs md:text-base text-[#8a7461] leading-relaxed">
+                  <ul className="mt-1 space-y-1.5 text-md md:text-base text-[#8a7461] leading-relaxed">
                     {pkg.activities.map((act) => (
                       <li key={act} className="flex gap-2">
                         <span className="mt-2.5 block h-1 w-1 rounded-full bg-[#e98228]" />
@@ -339,7 +339,7 @@ export default function TourPackages() {
                   <div className="mt-auto pt-2 flex items:end justify-center gap-1">
                     <Button
                       size="lg"
-                      className="rounded-full bg-[#e98228] hover:bg-[#cf701a] text-xs md:text-lg font-semibold shadow-md shadow-orange-500/30"
+                      className="rounded-full bg-[#e98228] hover:bg-[#cf701a] text-sm md:text-lg font-semibold shadow-md shadow-orange-500/30"
                       onClick={() => handleScrollToBooking(pkg.name)}
                     >
                       Pesan Paket
@@ -361,11 +361,11 @@ export default function TourPackages() {
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3C7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
               Form Pemesanan
             </p>
-            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+            <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
               <span className="text-[#3b2a20]">Ajukan Kunjungan </span>
               <span className="text-[#D98454]">Wisata Anda</span>
             </h2>
-            <p className="mt-4 text-sm md:text-base leading-relaxed text-[#8a7461]">
+            <p className="mt-4 text-md md:text-base leading-relaxed text-[#8a7461]">
               Isi data di bawah ini, pilih desa dan paket yang diinginkan. Tim
               pengelola akan menghubungi Anda melalui WhatsApp atau email.
             </p>
@@ -398,7 +398,7 @@ export default function TourPackages() {
           <div className="mt-10 rounded-3xl bg-white/95 backdrop-blur shadow-[0_22px_60px_rgba(0,0,0,0.06)] border border-orange-50 px-6 py-7 md:px-10 md:py-10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4 mb-6 border-b border-orange-100 pb-4">
               <div>
-                <p className="text-xs md:text-lg font-semibold uppercase tracking-[0.18em] text-[#e98228]">
+                <p className="text-md md:text-lg font-semibold uppercase tracking-[0.18em] text-[#e98228]">
                   Lengkapi informasi dengan jelas dan akurat
                 </p>
               </div>
@@ -521,7 +521,7 @@ export default function TourPackages() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex items-center justify-center rounded-full bg-[#e98228] px-8 py-3 text-base md:text-lg font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-[#cf701a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center justify-center rounded-full bg-[#e98228] px-8 py-3 text-lg md:text-xl font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-[#cf701a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Mengirim..." : "Kirim Pemesanan"}
                 </Button>

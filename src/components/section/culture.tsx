@@ -144,13 +144,13 @@ export default function CultureSection() {
           <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
             Seni & Budaya • Desa Pagelaran
           </p>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-[#3b2a20]">
+          <h2 className="mt-4 text-4xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-[#3b2a20]">
             Jiwa{" "}
             <span className="text-[#D98454]">
               Seni & Budaya Pagelaran
             </span>
           </h2>
-          <p className="mt-4 text-sm md:text-base leading-relaxed text-[#8a7461]">
+          <p className="mt-4 text-md md:text-base leading-relaxed text-[#8a7461]">
             Selamat datang di jantung budaya Desa Pagelaran, tempat di mana
             warisan leluhur tidak sekadar dikenang, tetapi hidup dalam
             aktivitas sehari-hari. Di sini, seni bukan hanya tontonan,
@@ -195,21 +195,21 @@ export default function CultureSection() {
           <div className="absolute inset-0 md:hidden opacity-25 pointer-events-none">
             <img
               src="/image/tumpeng.png"
-              className="w-[90%] h-[35%] object-cover items-center mx-auto mt-30"
+              className="w-[100%] h-[25%] object-cover items-center mx-auto mt-30"
             />
           </div>
 
           {/* === ISI CARD === */}
           <div className="relative z-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b2967d]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#b2967d]">
               1 • Tradisi dan Ritual Kehidupan
             </p>
 
-            <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#3b2a20]">
+            <h3 className="mt-2 text-2xl md:text-3xl font-bold text-[#3b2a20]">
               Nadi Budaya Pagelaran
             </h3>
 
-            <p className="mt-2 text-sm md:text-base text-[#8a7461]">
+            <p className="mt-2 text-base md:text-base text-[#8a7461]">
               Di Pagelaran, budaya adalah tuntunan. Ritual-ritual yang
               mengiringi siklus kehidupan dan alam menjadi fondasi harmoni
               antara manusia, alam, dan Sang Pencipta.
@@ -220,10 +220,10 @@ export default function CultureSection() {
                 <li key={item.title} className="flex gap-3">
                   <div className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-gradient-to-br from-[#E6A56E] to-[#D98454]" />
                   <div>
-                    <p className="text-sm md:text-base font-semibold text-[#3b2a20]">
+                    <p className="text-base md:text-base font-semibold text-[#3b2a20]">
                       {item.title}
                     </p>
-                    <p className="mt-1 text-xs md:text-base text-[#8a7461]">
+                    <p className="mt-1 text-base md:text-base text-[#8a7461]">
                       {item.description}
                     </p>
                   </div>
@@ -267,21 +267,21 @@ export default function CultureSection() {
               <img
                 src="/image/gerabah.png"
                 alt="Ilustrasi Gerabah"
-                className="w-[90%] h-[35%] object-cover items-center mx-auto mt-30"
+                className="w-full h-auto object-cover items-center mx-auto mt-30"
               />
             </div>
 
             {/* === ISI CARD === */}
             <div className="relative z-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#b2967d]">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#b2967d]">
                 2 • Pusat Seni Kriya
               </p>
 
-              <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#3b2a20]">
+              <h3 className="mt-2 text-2xl md:text-3xl font-bold text-[#3b2a20]">
                 Kampung Gerabah – Alkimia Tanah dan Tangan
               </h3>
 
-              <p className="mt-2 text-sm md:text-base text-[#8a7461]">
+              <p className="mt-2 text-base md:text-base text-[#8a7461]">
                 Jauh sebelum dikenal luas, kawasan ini bernama{" "}
                 <span className="font-semibold">“Desa Geta&apos;an”</span>, yang
                 mencerminkan kuatnya tradisi gerabah. Di sini, seni membentuk
@@ -294,10 +294,10 @@ export default function CultureSection() {
                     key={item.title}
                     className="rounded-2xl bg-[#FFF8F3] px-4 py-3 border border-[#FFE6D2]"
                   >
-                    <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#D98454]">
+                    <p className="text-base font-semibold uppercase tracking-[0.12em] text-[#D98454]">
                       {item.title}
                     </p>
-                    <p className="mt-1 text-xs md:text-sm text-[#8a7461]">
+                    <p className="mt-1 text-base md:text-base text-[#8a7461]">
                       {item.description}
                     </p>
                   </div>
@@ -305,10 +305,10 @@ export default function CultureSection() {
               </div>
 
               <div className="mt-5 rounded-2xl bg-gradient-to-r from-[#F6D9BE] via-[#E9B493] to-[#D99E7D] px-4 py-4 text-base md:text-lg text-[#4A3326]">
-                <p className="font-semibold">
+                <p className="font-semibold text-base md:text-lg">
                   Pengalaman Eduwisata: Dari Tanah Menjadi Karya
                 </p>
-                <p className="mt-1 text-xs md:text-sm">
+                <p className="mt-1 text-base md:text-sm">
                   Pengunjung dapat belajar langsung dari perajin, merasakan
                   tekstur tanah liat, dan mencoba menciptakan karya sendiri
                   menjadikan Kampung Gerabah sebagai kelas seni terbuka yang
@@ -348,11 +348,11 @@ export default function CultureSection() {
             <div className="relative rounded-3xl bg-gradient-to-br from-[#FFF3E7] via-[#FFE6D2] to-[#F9D5B5] px-6 py-8 md:px-9 md:py-10 text-[#4A3326] overflow-hidden">
 
               {/* === MOBILE BACKGROUND (DI BELAKANG KONTEN) === */}
-              <div className="absolute inset-0 md:hidden opacity-25 pointer-events-none">
+              <div className="absolute inset-0 md:hidden opacity-20 pointer-events-none">
                 <img
                   src="/image/wyg.png"
                   alt="Ilustrasi Panggung Budaya"
-                  className="w-[90%] h-[40%] object-cover mx-auto mt-10"
+                  className="w-full h-auto object-cover mx-auto mt-10"
                 />
               </div>
 
@@ -360,13 +360,13 @@ export default function CultureSection() {
               <div className="relative z-10">
                 <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#D98454]">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D98454]">
                       3 • Panggung Budaya Pagelaran
                     </p>
-                    <h3 className="mt-2 text-xl md:text-3xl font-bold text-[#4A3326]">
+                    <h3 className="mt-2 text-2xl md:text-3xl font-bold text-[#4A3326]">
                       Gema Seni Pertunjukan dari Mentaraman
                     </h3>
-                    <p className="mt-2 text-sm md:text-base text-[#7A5A45] max-w-2.5xl">
+                    <p className="mt-2 text-base md:text-base text-[#7A5A45] max-w-2.5xl">
                       Jantung seni pertunjukan berdetak di Dusun Mentaraman, tempat
                       para maestro melatih generasi muda. Dari gamelan, tari, hingga
                       teater rakyat, seluruh desa menjadi panggung terbuka bagi
@@ -374,7 +374,7 @@ export default function CultureSection() {
                     </p>
                   </div>
                   <div className="mt-2 text-xs md:text-base text-right text-[#7A5A45]">
-                    <p className="text-xs md:text-sm font-medium italic">
+                    <p className="text-sm md:text-sm font-medium italic">
                       &quot;Seni bukan hanya hiburan, tapi cara Pagelaran bercerita
                       pada dunia.&quot;
                     </p>
@@ -387,16 +387,16 @@ export default function CultureSection() {
                       key={group.category}
                       className="rounded-2xl bg-white/80 border border-[#F0CFB0] px-4 py-4 md:px-5 md:py-5 backdrop-blur-sm"
                     >
-                      <p className="text-base font-bold uppercase tracking-[0.14em] text-[#D98454] text-center">
+                      <p className="text-xl font-bold uppercase tracking-[0.14em] text-[#D98454] text-center">
                         {group.category}
                       </p>
                       <div className="mt-3 space-y-3">
                         {group.items.map((item) => (
                           <div key={item.title}>
-                            <p className="text-sm md:text-lg font-semibold text-[#4A3326]">
+                            <p className="text-lg md:text-lg font-semibold text-[#4A3326]">
                               {item.title}
                             </p>
-                            <p className="mt-1 text-[11px] md:text-sm leading-relaxed text-[#7A5A45]">
+                            <p className="mt-1 text-base md:text-sm leading-relaxed text-[#7A5A45]">
                               {item.description}
                             </p>
                           </div>
@@ -407,7 +407,7 @@ export default function CultureSection() {
                 </div>
 
                 {/* Catatan lokasi / highlight */}
-                <div className="mt-7 flex flex-col items-start gap-3 border-t border-[#F0CFB0] pt-5 text-[11px] md:text-sm text-[#7A5A45] md:flex-row md:items-center md:justify-between">
+                <div className="mt-7 flex flex-col items-start gap-3 border-t border-[#F0CFB0] pt-5 text-sm md:text-base text-[#7A5A45] md:flex-row md:items-center md:justify-between">
                   <p>
                     Banyak pertunjukan digelar pada momen khusus seperti ruwatan,
                     selamatan desa, pesta panen, dan festival budaya tahunan.

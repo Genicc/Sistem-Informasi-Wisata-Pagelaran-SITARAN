@@ -27,13 +27,13 @@ export async function GallerySection() {
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
                 Galeri • Desa Pagelaran
             </p>
-            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-[#3b2a20]">
+            <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight text-[#3b2a20]">
                 Merekam Jejak{" "}
             </h2>
-            <span className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-[#D98454]">
+            <span className="text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight text-[#D98454]">
                 Seni & Budaya Pagelaran
             </span>
-            <p className="mt-4 text-sm md:text-base leading-relaxed text-[#8a7461]">
+            <p className="mt-4 text-base md:text-base leading-relaxed text-[#8a7461]">
                 Kumpulan momen terbaik dari tradisi adat, pentas seni, hingga
                 aktivitas di Kampung Gerabah dan produk lokal yang menjadi
                 kebanggaan warga.

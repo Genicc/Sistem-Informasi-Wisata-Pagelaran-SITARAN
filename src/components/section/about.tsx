@@ -36,15 +36,15 @@ export default function AboutSection() {
                     </p>
 
                     {/* Judul */}
-                    <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
-                        <span className="text-[#3b2a20]">Tentang </span>
-                        <span className="text-[#D98454]">Desa Pagelaran</span>
+                    <h2 className="mt-4 text-4xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+                        <p className="text-[#3b2a20]">Tentang </p>
+                        <p className="text-[#D98454]">Desa Pagelaran</p>
                     </h2>
 
                     {/* Paragraf */}
-                    <div className="mt-4 md:mt-6 mx-auto max-w-5xl text-sm md:text-base leading-relaxed text-[#3b2a20] text-justify space-y-5">
+                    <div className="mt-4 md:mt-6 mx-auto max-w-5xl text-md md:text-base leading-relaxed text-[#3b2a20] text-justify space-y-5">
                         <p>
-                            <span className="inline-block text-4xl md:text-5xl font-extrabold text-[#D98454] mr-0.5 align-bottom">
+                            <span className="inline-block text-5xl md:text-5xl font-extrabold text-[#D98454] align-bottom">
                             D
                             </span>
                             esa Pagelaran merupakan salah satu desa di Kabupaten Malang yang memiliki 
@@ -115,11 +115,11 @@ export default function AboutSection() {
                             </div>
 
                         {/* ==== Konten Card ==== */}
-                        <h3 className="text-xl md:text-2xl font-bold text-[#4b2b16] mb-6 text-center">
+                        <h3 className="text-2xl md:text-2xl font-bold text-[#4b2b16] mb-6 text-center">
                             {item.title}
                         </h3>
 
-                        <p className="text-sm md:text-base leading-relaxed text-slate-700 text-justify flex-1">
+                        <p className="text-md md:text-base leading-relaxed text-slate-700 text-justify flex-1">
                             {item.description}
                         </p>
                     </article>

@@ -83,7 +83,7 @@ const ContactSection = () => {
         <div className="mx-auto max-w-6xl px-4 lg:px-0">
             {/* Heading */}
             <div className="mx-auto max-w-3xl text-center">
-                <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+                <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
                     <span className="text-[#3b2a20]">Hubungi </span>
                     <span className="text-[#D98454]">Kami</span>
                 </h2>
@@ -102,7 +102,7 @@ const ContactSection = () => {
             <div className="grid gap-10 lg:grid-cols-[1.1fr_minmax(0,1fr)] items-start mt-7">
             {/* Left: Informasi Kontak */}
             <div>
-                <h3 className="mb-5 text-lg md:text-xl font-semibold text-[#3b2a20]">
+                <h3 className="mb-5 text-xl md:text-xl font-semibold text-[#3b2a20]">
                 Informasi Kontak
                 </h3>
 
@@ -141,7 +141,7 @@ const ContactSection = () => {
                             <div className="text-xs uppercase tracking-[0.12em] text-[#b2967d]">
                                 {item.label}
                             </div>
-                            <div className="mt-1 text-lg md:text-base font-medium text-[#3b2a20]">
+                            <div className="mt-1 text-md md:text-base font-medium text-[#3b2a20]">
                                 {item.value}
                             </div>
                             </div>
@@ -177,7 +177,7 @@ const ContactSection = () => {
 
                 {/* Right: Lokasi Kami */}
                 <div>
-                    <h3 className="mb-5 text-lg md:text-xl font-semibold text-[#3b2a20]">
+                    <h3 className="mb-5 text-xl md:text-xl font-semibold text-[#3b2a20]">
                         Lokasi Kami
                     </h3>
 
@@ -198,7 +198,7 @@ const ContactSection = () => {
 
                         {/* TEXT INFO */}
                         <div className="mt-2 text-center">
-                            <div className="text-base md:text-lg font-semibold text-[#3b2a20]">
+                            <div className="text-lg md:text-xl font-semibold text-[#3b2a20]">
                             Desa Pagelaran
                             </div>
                             {/* <div className="mt-1 text-sm md:text-base text-[#8a7461]">
@@ -207,7 +207,7 @@ const ContactSection = () => {
 
                             <Button
                             asChild
-                            className="mt-2 rounded-full bg-[#e0863a] hover:bg-[#c9722c] text-white text-sm md:text-base px-6 py-2 shadow-[0_12px_30px_rgba(224,134,58,0.35)]"
+                            className="mt-2 rounded-full bg-[#e0863a] hover:bg-[#c9722c] text-white text-md md:text-lg px-6 py-2 shadow-[0_12px_30px_rgba(224,134,58,0.35)]"
                             >
                             <a
                                 href="https://maps.app.goo.gl/5w7U4mfhaaWiZgU8A"
