@@ -12,6 +12,8 @@ const products: Product[] = [
     { name: "Minuman Tradisional Sinom", image: "/image/sinom.jpg" },
     { name: "Susu Kedelai Ibu Ani", image: "/image/susu.jpg" },
     { name: "Jamu Mbak Ani", image: "/image/jamu.jpg" },
+    { name: "Kerajinan Gerabah", image: "/image/produk_gerabah.jpg" },
+    { name: "Kaos Mentaraman", image: "/image/kaos_mentaraman.png" },
 ];
 
 function ProductCard({ product }: { product: Product }) {

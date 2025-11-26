@@ -358,7 +358,7 @@ export default function TourPackages() {
       <section id="booking" className="w-full bg-gradient-to-b from-[#FFE9D9]/65 via-[#FFE9D9]/75 to-[#FFE9D9]/85 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4 md:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
+            <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3C7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
               Form Pemesanan
             </p>
             <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
