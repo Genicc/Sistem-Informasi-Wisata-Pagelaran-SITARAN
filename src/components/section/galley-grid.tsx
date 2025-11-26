@@ -4,6 +4,7 @@
 import { useState } from "react";
 // import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "../ui/skeleton";
 
 type DriveImage = {
     id: string;
@@ -19,6 +20,13 @@ export function GalleryGrid({ items }: GalleryGridProps) {
     // State untuk toggle
     const [showAll, setShowAll] = useState(false);
 
+    // Track loading per gambar
+    const [loadedMap, setLoadedMap] = useState<{ [key: string]: boolean }>({});
+
+    const handleLoaded = (id: string) => {
+        setLoadedMap((prev) => ({ ...prev, [id]: true }));
+    };
+
     // Foto terlihat (8 foto awal atau semua)
     const visibleItems = showAll ? items : items.slice(0, 8);
 
@@ -30,22 +38,29 @@ export function GalleryGrid({ items }: GalleryGridProps) {
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {visibleItems.map((item) => {
             const cleanTitle = item.name.replace(/\.[^/.]+$/, "");
-
+            const isLoaded = loadedMap[item.id];
+            
             return (
                 <div
-                key={item.id}
-                className="group relative overflow-hidden rounded-3xl bg-[#f4ece3] shadow-[0_18px_40px_rgba(0,0,0,0.06)]"
+                    key={item.id}
+                    className="group relative overflow-hidden rounded-3xl bg-[#f4ece3] shadow-[0_18px_40px_rgba(0,0,0,0.06)]"
                 >
                 {/* Aspect ratio seragam */}
                 <div className="relative aspect-[4/3]">
+                    {/* === SKELETON === */}
+                    {!isLoaded && (
+                        <Skeleton className="absolute inset-0 w-full h-full rounded-none" />
+                    )}
+
                     <img
                     src={item.thumbnailLink}
                     alt={cleanTitle}
                     // fill
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    referrerPolicy="no-referrer"
                     loading="lazy"
+                    onLoad={() => handleLoaded(item.id)} 
+                    referrerPolicy="no-referrer"
                     />
 
                     {/* Overlay */}
