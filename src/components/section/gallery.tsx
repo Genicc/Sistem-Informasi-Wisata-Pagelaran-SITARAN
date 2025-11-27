@@ -1,14 +1,16 @@
 // src/components/sections/gallery-section.tsx
-// import Image from "next/image";
-import { getDriveImages } from "@/lib/googleDrive";
+import { getBlobImages } from "@/lib/vercelBlobGallery";
 import { GalleryGrid } from "@/components/section/galley-grid";
 
+// Optional: supaya galeri auto refresh tiap 60 detik
+export const revalidate = "force-dynamic";
+
 export async function GallerySection() {
-    // 1. Fetch data dari Google Drive (Server Side)
-    const driveImages = await getDriveImages();
+    // 1. Fetch data dari Vercel Blob (Server Side)
+    const blobImages = await getBlobImages();
 
     // 2. Batasi jumlah foto maksimum (misal 18)
-    const galleryItems = driveImages.slice(0, 18);
+    const galleryItems = blobImages.slice(0, 18);
 
     return (
         <section
@@ -49,7 +51,7 @@ export async function GallerySection() {
             {galleryItems.length === 0 ? (
             <div className="text-center py-20">
                 <p className="text-[#8a7461]">
-                Menunggu foto diupload ke Google Drive...
+                Menunggu foto diupload ke Vercel Blob Storage...
                 </p>
             </div>
             ) : (

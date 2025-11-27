@@ -4,16 +4,16 @@
 import { useState } from "react";
 // import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "../ui/skeleton";
+// import { Skeleton } from "../ui/skeleton";
 
-type DriveImage = {
+type BlobImage = {
     id: string;
     name: string;
-    thumbnailLink: string;
+    url: string;
 };
 
 type GalleryGridProps = {
-    items: DriveImage[];
+    items: BlobImage[];
 };
 
 export function GalleryGrid({ items }: GalleryGridProps) {
@@ -29,38 +29,47 @@ export function GalleryGrid({ items }: GalleryGridProps) {
 
     // Foto terlihat (8 foto awal atau semua)
     const visibleItems = showAll ? items : items.slice(0, 8);
-
     const hasMore = items.length > 8;
 
     return (
         <>
-        {/* Grid seragam */}
+        {/* 
+            Mobile–md: grid (1–2 kolom)
+            lg ke atas: flex 4 kolom per baris, row terakhir auto center
+        */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {visibleItems.map((item) => {
-            const cleanTitle = item.name.replace(/\.[^/.]+$/, "");
-            const isLoaded = loadedMap[item.id];
-            
+            const cleanTitle = item.name
+                .replace(/[-_]+/g, " ")
+                .replace(/\s+/g, " ")
+                .trim()
+                .replace(/\b\w/g, (c) => c.toUpperCase());
+
+            //   const isLoaded = loadedMap[item.id];
+
             return (
                 <div
-                    key={item.id}
-                    className="group relative overflow-hidden rounded-3xl bg-[#f4ece3] shadow-[0_18px_40px_rgba(0,0,0,0.06)]"
+                key={item.id}
+                className="
+                    group relative overflow-hidden rounded-3xl
+                    bg-[#f4ece3] shadow-[0_18px_40px_rgba(0,0,0,0.06)]
+                    
+                "
                 >
                 {/* Aspect ratio seragam */}
                 <div className="relative aspect-[4/3]">
-                    {/* === SKELETON === */}
-                    {!isLoaded && (
-                        <Skeleton className="absolute inset-0 w-full h-full rounded-none" />
-                    )}
+                    {/* === SKELETON TANPA KEDIP === */}
+                    {/* {!isLoaded && (
+                    <Skeleton className="absolute inset-0 w-full h-full rounded-none animate-none" />
+                    )} */}
 
                     <img
-                    src={item.thumbnailLink}
+                    src={item.url}
                     alt={cleanTitle}
-                    // fill
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     loading="lazy"
-                    onLoad={() => handleLoaded(item.id)} 
-                    referrerPolicy="no-referrer"
+                    onLoad={() => handleLoaded(item.id)}
+                    onError={() => handleLoaded(item.id)}
                     />
 
                     {/* Overlay */}
@@ -68,12 +77,12 @@ export function GalleryGrid({ items }: GalleryGridProps) {
 
                     {/* Text pada gambar */}
                     <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 text-center">
-                        <h3 className="mt-1 text-md md:text-lg font-semibold text-white drop-shadow-md line-clamp-2">
-                            {cleanTitle}
-                        </h3>
-                        <p className="mt-1 text-sm md:text-sm text-[#ffe9d6] opacity-80">
-                            Desa Pagelaran
-                        </p>
+                    <h3 className="mt-1 text-md md:text-lg font-semibold text-white drop-shadow-md line-clamp-2">
+                        {cleanTitle}
+                    </h3>
+                    <p className="mt-1 text-sm md:text-sm text-[#ffe9d6] opacity-80">
+                        Desa Pagelaran
+                    </p>
                     </div>
                 </div>
 
