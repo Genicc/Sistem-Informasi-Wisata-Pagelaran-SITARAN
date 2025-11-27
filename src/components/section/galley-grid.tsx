@@ -17,35 +17,42 @@ type GalleryGridProps = {
 };
 
 export function GalleryGrid({ items }: GalleryGridProps) {
-    // State untuk toggle
-    const [showAll, setShowAll] = useState(false);
+    // ====== PAGINATION STATE ======
+    const PAGE_SIZE = 8; // jumlah foto per halaman
+    const [page, setPage] = useState(1);
 
-    // Track loading per gambar
+    const totalPages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
+    const startIndex = (page - 1) * PAGE_SIZE;
+    const endIndex = startIndex + PAGE_SIZE;
+    const pageItems = items.slice(startIndex, endIndex);
+
+    // Pastikan page tidak lebih dari totalPages jika data berubah
+    if (page > totalPages) {
+        setPage(totalPages);
+    }
+
+    // ====== LOADING STATE PER GAMBAR ======
     const [loadedMap, setLoadedMap] = useState<{ [key: string]: boolean }>({});
 
     const handleLoaded = (id: string) => {
         setLoadedMap((prev) => ({ ...prev, [id]: true }));
     };
 
-    // Foto terlihat (8 foto awal atau semua)
-    const visibleItems = showAll ? items : items.slice(0, 8);
-    const hasMore = items.length > 8;
-
     return (
         <>
-        {/* 
-            Mobile–md: grid (1–2 kolom)
-            lg ke atas: flex 4 kolom per baris, row terakhir auto center
+        {/*
+            < lg   : grid 1–2 kolom
+            >= lg : flex 4 kartu per baris, row terakhir auto center
         */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-            {visibleItems.map((item) => {
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 lg:flex lg:flex-wrap lg:justify-center lg:gap-6">
+            {pageItems.map((item) => {
             const cleanTitle = item.name
                 .replace(/[-_]+/g, " ")
                 .replace(/\s+/g, " ")
                 .trim()
                 .replace(/\b\w/g, (c) => c.toUpperCase());
 
-            //   const isLoaded = loadedMap[item.id];
+            // const isLoaded = loadedMap[item.id];
 
             return (
                 <div
@@ -53,12 +60,13 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 className="
                     group relative overflow-hidden rounded-3xl
                     bg-[#f4ece3] shadow-[0_18px_40px_rgba(0,0,0,0.06)]
-                    
+                    w-full
+                    lg:basis-1/5 lg:max-w-[25%]   /* 4 kolom di desktop */
                 "
                 >
-                {/* Aspect ratio seragam */}
-                <div className="relative aspect-[4/3]">
-                    {/* === SKELETON TANPA KEDIP === */}
+                {/* KONTROL UKURAN GAMBAR (RESPONSIVE) */}
+                <div className="relative w-full aspect-[4/3]">
+                    {/* Skeleton tanpa kedip */}
                     {/* {!isLoaded && (
                     <Skeleton className="absolute inset-0 w-full h-full rounded-none animate-none" />
                     )} */}
@@ -93,16 +101,61 @@ export function GalleryGrid({ items }: GalleryGridProps) {
             })}
         </div>
 
-        {/* Tombol toggle */}
-        {hasMore && (
-            <div className="mt-10 flex justify-center">
-            <Button
+        {/* ====== NAVIGASI HALAMAN ====== */}
+        {totalPages > 1 && (
+            <div className="mt-10 flex flex-col items-center gap-4">
+            {/* Prev / Next */}
+            <div className="flex items-center gap-3">
+                <Button
                 type="button"
-                onClick={() => setShowAll(!showAll)}
-                className="rounded-full bg-[#e98228] px-8 py-3 text-md md:text-base font-semibold text-white shadow-lg shadow-orange-500/30 hover:bg-[#cf701a] transition-colors"
-            >
-                {showAll ? "Tampilkan lebih sedikit" : "Lihat lainnya"}
-            </Button>
+                variant="outline"
+                disabled={page === 1}
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                className="px-4 py-2 text-sm md:text-base"
+                >
+                Sebelumnya
+                </Button>
+
+                {/* Nomor halaman */}
+                <div className="flex items-center gap-1">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                    (pageNumber) => (
+                    <button
+                        key={pageNumber}
+                        type="button"
+                        onClick={() => setPage(pageNumber)}
+                        className={`
+                        inline-flex h-8 w-8 items-center justify-center rounded-full text-sm font-medium
+                        ${
+                            page === pageNumber
+                            ? "bg-[#e98228] text-white shadow-md"
+                            : "bg-white/80 text-[#4b2b16] hover:bg-[#ffe6d2]"
+                        }
+                        `}
+                    >
+                        {pageNumber}
+                    </button>
+                    )
+                )}
+                </div>
+
+                <Button
+                type="button"
+                variant="outline"
+                disabled={page === totalPages}
+                onClick={() =>
+                    setPage((p) => Math.min(totalPages, p + 1))
+                }
+                className="px-4 py-2 text-sm md:text-base"
+                >
+                Berikutnya
+                </Button>
+            </div>
+
+            {/* Info halaman */}
+            <p className="text-xs md:text-sm text-[#8a7461]">
+                Halaman {page} dari {totalPages}
+            </p>
             </div>
         )}
         </>

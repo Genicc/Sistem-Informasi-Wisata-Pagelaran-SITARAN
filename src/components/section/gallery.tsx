@@ -23,7 +23,7 @@ export async function GallerySection() {
             <div className="absolute bottom-0 right-0 h-52 w-52 rounded-full bg-[#E3F2FD] blur-3xl" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="mx-auto max-w-3xl text-center">
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
