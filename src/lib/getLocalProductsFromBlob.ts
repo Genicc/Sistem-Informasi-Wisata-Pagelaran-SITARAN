@@ -5,7 +5,7 @@ export type Product = {
   image: string;
 };
 
-const BLOB_PREFIX = "local-products/"; // atau prefix yang kamu pakai
+const BLOB_PREFIX = "product/"; // atau prefix yang kamu pakai
 
 function prettifyName(pathname: string): string {
   const parts = pathname.split("/");

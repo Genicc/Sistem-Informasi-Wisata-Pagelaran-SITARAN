@@ -5,7 +5,7 @@ import Navbar from "@/components/global/navbar";
 import AboutSection from "@/components/section/about";
 import Footer from "@/components/global/footer";
 import ContactSection from "@/components/section/contact";
-import LocalProducts from "@/components/section/products";
+import LocalProducts from "@/components/section/local-products-section";
 import TourPackageSection from "@/components/section/packages";
 import CultureSection from "@/components/section/culture";
 import { GallerySection } from "@/components/section/gallery";
