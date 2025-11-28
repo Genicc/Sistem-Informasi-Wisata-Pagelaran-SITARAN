@@ -18,11 +18,11 @@ export default async function LocalProducts() {
           <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
             Produk Lokal
           </p>
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
+          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
             <span className="text-[#3b2a20]">Karya Asli </span>
             <span className="text-[#D98454]">Pagelaran</span>
           </h2>
-          <p className="mt-4 text-base md:text-base leading-relaxed text-[#8a7461]">
+          <p className="mt-4 text-base md:text-lg leading-relaxed text-[#8a7461]">
             Jelajahi ragam produk lokal dari Pagelaran yang dibuat dengan
             ketelatenan dan sentuhan seni masyarakat desa.
           </p>

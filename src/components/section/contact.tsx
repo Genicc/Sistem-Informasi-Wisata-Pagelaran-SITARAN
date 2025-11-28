@@ -83,7 +83,7 @@ const ContactSection = () => {
         <div className="mx-auto max-w-6xl px-4 lg:px-0">
             {/* Heading */}
             <div className="mx-auto max-w-3xl text-center">
-                <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
+                <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                     <span className="text-[#3b2a20]">Hubungi </span>
                     <span className="text-[#D98454]">Kami</span>
                 </h2>
@@ -102,7 +102,7 @@ const ContactSection = () => {
             <div className="grid gap-10 lg:grid-cols-[1.1fr_minmax(0,1fr)] items-start mt-7">
             {/* Left: Informasi Kontak */}
             <div>
-                <h3 className="mb-5 text-xl md:text-xl font-semibold text-[#3b2a20]">
+                <h3 className="mb-5 text-xl md:text-2xl font-semibold text-[#3b2a20]">
                 Informasi Kontak
                 </h3>
 
@@ -138,10 +138,10 @@ const ContactSection = () => {
                             <Icon className="h-5 w-5 md:h-6 md:w-6 text-[#e0863a] group-hover:scale-110 transition-all" />
                             </div>
                             <div>
-                            <div className="text-xs uppercase tracking-[0.12em] text-[#b2967d]">
+                            <div className="text-sm uppercase tracking-[0.12em] text-[#b2967d]">
                                 {item.label}
                             </div>
-                            <div className="mt-1 text-md md:text-base font-medium text-[#3b2a20]">
+                            <div className="mt-1 text-md md:text-lg font-medium text-[#3b2a20]">
                                 {item.value}
                             </div>
                             </div>
@@ -177,7 +177,7 @@ const ContactSection = () => {
 
                 {/* Right: Lokasi Kami */}
                 <div>
-                    <h3 className="mb-5 text-xl md:text-xl font-semibold text-[#3b2a20]">
+                    <h3 className="mb-5 text-xl md:text-2xl font-semibold text-[#3b2a20]">
                         Lokasi Kami
                     </h3>
 
@@ -188,7 +188,7 @@ const ContactSection = () => {
                         <div className="w-full rounded-2xl overflow-hidden shadow-md">
                             <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126368.83084219976!2d112.52194815583269!3d-8.20013846972813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78a0689c0e20e9%3A0x91131d2361b5aee1!2sKec.%20Pagelaran%2C%20Kabupaten%20Malang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1763342054589!5m2!1sid!2sid"
-                            className="w-full h-[280px] md:h-[360px]"
+                            className="w-full h-[300px] md:h-[380px]"
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
@@ -207,7 +207,7 @@ const ContactSection = () => {
 
                             <Button
                             asChild
-                            className="mt-2 rounded-full bg-[#e0863a] hover:bg-[#c9722c] text-white text-md md:text-lg px-6 py-2 shadow-[0_12px_30px_rgba(224,134,58,0.35)]"
+                            className="mt-2 rounded-full bg-[#e0863a] hover:bg-[#c9722c] text-white text-md md:text-md px-6 py-2 shadow-[0_12px_30px_rgba(224,134,58,0.35)]"
                             >
                             <a
                                 href="https://maps.app.goo.gl/5w7U4mfhaaWiZgU8A"

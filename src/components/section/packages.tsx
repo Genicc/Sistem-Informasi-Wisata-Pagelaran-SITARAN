@@ -193,7 +193,7 @@ export default function TourPackages() {
 
       const data: ApiFormResponse = await res.json();
 
-      console.log("Response dari API:", data);
+      // console.log("Response dari API:", data);
 
       // PERBAIKAN DI SINI:
       // Kita anggap sukses jika:
@@ -247,7 +247,7 @@ export default function TourPackages() {
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3E7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
               Paket Wisata
             </p>
-            <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
+            <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
               <span className="text-[#3b2a20]">Pilihan </span>
               <span className="text-[#D98454]">Paket Wisata</span>
             </h2>
@@ -266,7 +266,7 @@ export default function TourPackages() {
               <button
                 type="button"
                 onClick={() => handleVillageChange("desaA")}
-                className={`px-5 py-2.5 rounded-full text-sm md:text-md font-semibold transition-all ${
+                className={`px-5 py-2.5 rounded-full text-sm md:text-lg font-semibold transition-all ${
                   selectedVillage === "desaA"
                     ? "bg-[#e98228] text-white shadow-md"
                     : "text-[#8a7461] hover:bg-[#ffe7d3]"
@@ -277,7 +277,7 @@ export default function TourPackages() {
               <button
                 type="button"
                 onClick={() => handleVillageChange("desaB")}
-                className={`px-5 py-2.5 rounded-full text-sm md:text-md font-semibold transition-all ${
+                className={`px-5 py-2.5 rounded-full text-sm md:text-lg font-semibold transition-all ${
                   selectedVillage === "desaB"
                     ? "bg-[#e98228] text-white shadow-md"
                     : "text-[#8a7461] hover:bg-[#ffe7d3]"
@@ -289,13 +289,13 @@ export default function TourPackages() {
           </div>
 
           <div className="text-center max-w-xl mx-auto mb-8 md:mb-10">
-            <h3 className="text-xl md:text-2xl font-semibold text-[#3b2a20]">
+            <h3 className="text-xl md:text-3xl font-semibold text-[#3b2a20]">
               {currentVillage.name}
             </h3>
             <p className="mt-3 text-md md:text-lg text-[#8a7461]">
               {currentVillage.subtitle}
             </p>
-            <p className="mt-1 text-md md:text-md text-[#b08a6b]">
+            <p className="mt-1 text-md md:text-lg text-[#b08a6b]">
               {currentVillage.highlight}
             </p>
           </div>
@@ -323,14 +323,14 @@ export default function TourPackages() {
                     </span>
                   </div>
 
-                  <h4 className="text-xl md:text-xl font-semibold text-[#3b2a20] leading-snug">
+                  <h4 className="text-xl md:text-2xl font-semibold text-[#3b2a20] leading-snug">
                     {pkg.name}
                   </h4>
 
-                  <ul className="mt-1 space-y-1.5 text-md md:text-base text-[#8a7461] leading-relaxed">
+                  <ul className="mt-1 space-y-1.5 text-md md:text-lg text-[#8a7461] leading-relaxed">
                     {pkg.activities.map((act) => (
                       <li key={act} className="flex gap-2">
-                        <span className="mt-2.5 block h-1 w-1 rounded-full bg-[#e98228]" />
+                        <span className="mt-2.5 block h-2 w-2 rounded-full bg-[#e98228]" />
                         <span>{act}</span>
                       </li>
                     ))}
@@ -361,11 +361,11 @@ export default function TourPackages() {
             <p className="inline-flex items-center gap-2 rounded-full bg-[#FFF3C7] px-4 py-1 text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-[#D98454]">
               Form Pemesanan
             </p>
-            <h2 className="mt-4 text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight">
-              <span className="text-[#3b2a20]">Ajukan Kunjungan </span>
-              <span className="text-[#D98454]">Wisata Anda</span>
+            <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+              <h3 className="text-[#3b2a20]">Ajukan Kunjungan </h3>
+              <h3 className="text-[#D98454]">Wisata Anda</h3>
             </h2>
-            <p className="mt-4 text-md md:text-base leading-relaxed text-[#8a7461]">
+            <p className="mt-4 text-md md:text-lg leading-relaxed text-[#8a7461]">
               Isi data di bawah ini, pilih desa dan paket yang diinginkan. Tim
               pengelola akan menghubungi Anda melalui WhatsApp atau email.
             </p>
@@ -398,7 +398,7 @@ export default function TourPackages() {
           <div className="mt-10 rounded-3xl bg-white/95 backdrop-blur shadow-[0_22px_60px_rgba(0,0,0,0.06)] border border-orange-50 px-6 py-7 md:px-10 md:py-10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4 mb-6 border-b border-orange-100 pb-4">
               <div>
-                <p className="text-md md:text-lg font-semibold uppercase tracking-[0.18em] text-[#e98228]">
+                <p className="text-md md:text-xl font-semibold uppercase tracking-[0.18em] text-[#e98228]">
                   Lengkapi informasi dengan jelas dan akurat
                 </p>
               </div>
@@ -406,7 +406,7 @@ export default function TourPackages() {
 
             <form onSubmit={handleSubmit} className="grid gap-6 md:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <label className="text-base font-semibold text-[#3b2a20]">
+                <label className="text-lg font-semibold text-[#3b2a20]">
                   Nama Lengkap / Instansi
                 </label>
                 <input
@@ -419,7 +419,7 @@ export default function TourPackages() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-base font-semibold text-[#3b2a20]">
+                <label className="text-lg font-semibold text-[#3b2a20]">
                   Email
                 </label>
                 <input
@@ -432,7 +432,7 @@ export default function TourPackages() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-base font-semibold text-[#3b2a20]">
+                <label className="text-lg font-semibold text-[#3b2a20]">
                   Nomor WhatsApp
                 </label>
                 <input
@@ -445,7 +445,7 @@ export default function TourPackages() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-base font-semibold text-[#3b2a20]">
+                <label className="text-lg font-semibold text-[#3b2a20]">
                   Jumlah Peserta
                 </label>
                 <input
@@ -459,7 +459,7 @@ export default function TourPackages() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-base font-semibold text-[#3b2a20]">
+                <label className="text-lg font-semibold text-[#3b2a20]">
                   Tanggal Kunjungan
                 </label>
                 <input
@@ -471,7 +471,7 @@ export default function TourPackages() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-base font-semibold text-[#3b2a20]">
+                <label className="text-lg font-semibold text-[#3b2a20]">
                   Pilih Desa
                 </label>
                 <select
@@ -486,7 +486,7 @@ export default function TourPackages() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-base font-semibold text-[#3b2a20]">
+                <label className="text-lg font-semibold text-[#3b2a20]">
                   Pilih Paket
                 </label>
                 <select
@@ -506,7 +506,7 @@ export default function TourPackages() {
               </div>
 
               <div className="md:col-span-2 flex flex-col gap-2">
-                <label className="text-base font-semibold text-[#3b2a20]">
+                <label className="text-lg font-semibold text-[#3b2a20]">
                   Catatan Tambahan (opsional)
                 </label>
                 <textarea

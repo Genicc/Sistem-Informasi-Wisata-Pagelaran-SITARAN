@@ -85,10 +85,10 @@ export function GalleryGrid({ items }: GalleryGridProps) {
 
                     {/* Text pada gambar */}
                     <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 text-center">
-                    <h3 className="mt-1 text-md md:text-lg font-semibold text-white drop-shadow-md line-clamp-2">
+                    <h3 className="mt-1 text-md md:text-xl font-semibold text-white drop-shadow-md line-clamp-2">
                         {cleanTitle}
                     </h3>
-                    <p className="mt-1 text-sm md:text-sm text-[#ffe9d6] opacity-80">
+                    <p className="mt-1 text-sm md:text-md text-[#ffe9d6] opacity-80">
                         Desa Pagelaran
                     </p>
                     </div>
