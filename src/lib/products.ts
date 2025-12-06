@@ -6,11 +6,11 @@ export type Product = {
   image: string;
 };
 
-// 👉 fungsi untuk mengubah "product/1765...-jamu-mbak-ani.jpg" → "Jamu Mbak Ani"
-export function prettifyProductName(pathname: string): string {
+// ✅ helper generic untuk nama file Blob
+export function prettifyBlobName(pathname: string): string {
   // buang prefix folder
   const cleanPath = pathname.replace(/^gallery\//, "").replace(/^product\//, "");
-  // contoh sekarang: "1765037775664-jamu-mbak-ani.jpg"
+  // contoh: "1765037775664-jamu-mbak-ani.jpg"
 
   // buang ekstensi (.jpg, .png, dll)
   const withoutExt = cleanPath.replace(/\.[^.]+$/, ""); // "1765037775664-jamu-mbak-ani"
@@ -32,8 +32,10 @@ export function prettifyProductName(pathname: string): string {
 export async function getProductsFromBlob(): Promise<Product[]> {
   const { blobs } = await list({ prefix: "product/" });
 
-  return blobs.map((blob) => ({
-    name: prettifyProductName(blob.pathname), // ⬅️ nama sudah BERSIH di sini
-    image: blob.url,
-  }));
+  return blobs
+    .filter((blob) => /\.(png|jpe?g|webp|gif|avif)$/i.test(blob.pathname))
+    .map((blob) => ({
+      name: prettifyBlobName(blob.pathname), // ⬅️ pakai helper generic
+      image: blob.url,
+    }));
 }
