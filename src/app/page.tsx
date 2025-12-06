@@ -29,11 +29,11 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/image/hero.png"
+            src="/image/hero4.jpg"
             alt="Gerbang Desa Seni Sitaran"
             fill
             priority
-            className="object-cover"
+            className="object-cover object-[45%_50%] md:object-center"
           />
 
           {/* Overlay gradasi putih supaya teks lebih kebaca */}

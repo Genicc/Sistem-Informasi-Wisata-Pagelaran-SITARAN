@@ -362,8 +362,8 @@ export default function TourPackages() {
               Form Pemesanan
             </p>
             <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              <h3 className="text-[#3b2a20]">Ajukan Kunjungan </h3>
-              <h3 className="text-[#D98454]">Wisata Anda</h3>
+              <span className="block text-[#3b2a20]">Ajukan Kunjungan </span>
+              <span className="block text-[#D98454]">Wisata Anda</span>
             </h2>
             <p className="mt-4 text-md md:text-lg leading-relaxed text-[#8a7461]">
               Isi data di bawah ini, pilih desa dan paket yang diinginkan. Tim
