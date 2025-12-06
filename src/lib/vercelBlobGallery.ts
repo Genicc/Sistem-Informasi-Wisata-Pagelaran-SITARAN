@@ -7,21 +7,30 @@ export type BlobImage = {
   url: string;
 };
 
-const GALLERY_BLOB_PREFIX = "gallery/"; // samain gaya dengan BLOB_PREFIX di product
+const GALLERY_BLOB_PREFIX = "gallery/";
 
+// Ubah "gallery/1765...-foto-kegiatan-desa.jpg" → "Foto Kegiatan Desa"
 function prettifyName(pathname: string): string {
-  const parts = pathname.split("/");
-  const filename = parts[parts.length - 1];
+  // 1. buang prefix folder
+  const withoutFolder = pathname
+    .replace(/^gallery\//, "")
+    .replace(/^product\//, "");
 
-  const withoutExt = filename.replace(/\.[^.]+$/, "");
-  const withSpaces = withoutExt.replace(/[-_]+/g, " ");
+  // 2. buang ekstensi (.jpg, .png, dll)
+  const withoutExt = withoutFolder.replace(/\.[^.]+$/, "");
 
+  // 3. buang angka + "-" di depan (timestamp)
+  //    contoh: "1765037775664-foto-kegiatan-desa" → "foto-kegiatan-desa"
+  const withoutTimestamp = withoutExt.replace(/^\d+-/, "");
+
+  // 4. ganti - dan _ jadi spasi
+  const withSpaces = withoutTimestamp.replace(/[-_]+/g, " ");
+
+  // 5. rapikan spasi & kapital tiap kata
   return withSpaces
-    .split(" ")
-    .map((word) =>
-      word.length === 0 ? "" : word[0].toUpperCase() + word.slice(1)
-    )
-    .join(" ");
+    .trim()
+    .replace(/\s+/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 export async function getBlobImages(): Promise<BlobImage[]> {
@@ -30,16 +39,14 @@ export async function getBlobImages(): Promise<BlobImage[]> {
     limit: 100,
   });
 
-  console.log("GALLERY BLOBS:", blobs.map((b) => b.pathname));
-
   return blobs
-    // buang "folder kosong" dan non-image sekaligus, pakai pola yang sama dengan product
+    // hanya file gambar
     .filter((blob) =>
       /\.(png|jpe?g|webp|gif|avif)$/i.test(blob.pathname)
     )
     .map((blob) => ({
-      id: blob.url, // boleh juga pakai blob.pathname kalau mau stable ID
-      name: prettifyName(blob.pathname),
-      url: blob.url,
+      id: blob.url,                    // ID unik
+      name: prettifyName(blob.pathname), // ⬅️ nama SUDAH rapi di sini
+      url: blob.url,                   // URL asli untuk <img src=...>
     }));
 }

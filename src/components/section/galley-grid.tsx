@@ -47,11 +47,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6 lg:flex lg:flex-wrap lg:justify-center lg:gap-6">
             {pageItems.map((item) => {
             const cleanTitle = item.name
-                .replace(/[-_]+/g, " ")
-                .replace(/\s+/g, " ")
-                .trim()
-                .replace(/\b\w/g, (c) => c.toUpperCase());
-
+                
             // const isLoaded = loadedMap[item.id];
 
             return (
