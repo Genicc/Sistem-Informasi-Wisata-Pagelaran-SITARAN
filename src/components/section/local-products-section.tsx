@@ -2,7 +2,7 @@
 import { getLocalProductsFromBlob } from "@/lib/getLocalProductsFromBlob";
 import { ProductGrid } from "./product-grid"; // atau "../section/product-grid" sesuai struktur folder
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 export default async function LocalProducts() {
   const products = await getLocalProductsFromBlob();
