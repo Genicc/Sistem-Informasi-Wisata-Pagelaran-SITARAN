@@ -27,6 +27,8 @@ export async function getLocalProductsFromBlob(): Promise<Product[]> {
     prefix: BLOB_PREFIX,
   });
 
+  console.log("PRODUCT BLOBS:", blobs.map((b) => b.pathname));
+
   return blobs
     // ⬇⬇⬇ perbaikan di sini: filter pakai ekstensi, bukan contentType
     .filter((blob) =>

@@ -10,8 +10,8 @@ const Footer = () => {
                     {/* Teks Deskripsi */}
                     <div className="max-w-xl space-y-2">
                         <h2 className="text-3xl md:text-5xl font-extrabold tracking-wide drop-shadow-md text-[#3b2a20]">
-                            DESA EDUWISATA 
-                            <h2 className="text-[#D98454]" >PAGELARAN</h2>
+                            <span>DESA EDUWISATA </span>
+                            <span className="text-[#D98454]" >PAGELARAN</span>
                         </h2>
                         <p className="text-md md:text-lg leading-relaxed">
                         Portal resmi SITARAN, kampung seni & gerabah Mentaraman di Desa Pagelaran, Malang. 
