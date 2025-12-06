@@ -14,7 +14,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const siteUrl = "https://sitaran.co.id";
 
-export const revalidate = 3600; // 1 jam
+export const revalidate = "force-dynamic";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
