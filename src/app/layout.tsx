@@ -11,6 +11,7 @@ import CultureSection from "@/components/section/culture";
 import { GallerySection } from "@/components/section/gallery";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import FloatingWA from "@/components/section/FloatingWA";
 
 const siteUrl = "https://sitaran.co.id";
 
@@ -131,6 +132,7 @@ export default function RootLayout({
       <body className="overflow-x-hidden">
         <Navbar />
         {children}
+        <FloatingWA />
         <AboutSection />
         <CultureSection />
         <GallerySection />
